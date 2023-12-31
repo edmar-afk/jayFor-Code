@@ -1,5 +1,5 @@
 import NotFound from "../components/NotFound"
-import ChatBot from "../components/chatBot"
+import ChatBot from "../components/ChatBot"
 
 function Shop() {
   return (

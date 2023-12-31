@@ -1,4 +1,6 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";import { faRobot } from "@fortawesome/free-solid-svg-icons";import { Tooltip } from "react-tooltip";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faRobot } from "@fortawesome/free-solid-svg-icons";
+import { Tooltip } from "react-tooltip";
 function ChatBot() {
 	return (
 		<div className="bg-white p-3 sm:p-4 rounded-full  text-gray-800 animate-bounce fixed bottom-5 sm:bottom-8 right-8">

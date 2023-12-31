@@ -7,7 +7,7 @@ import { references } from "../components/data/Links";
 import { useState, useEffect } from "react";
 import me from "../assets/img/favicon.png";
 import Loader from "../components/Loader";
-import ChatBot from "../components/chatBot";
+import ChatBot from "../components/ChatBot";
 function About() {
 	const [loader, setLoader] = useState(true);
 
