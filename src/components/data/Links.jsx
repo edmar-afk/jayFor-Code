@@ -47,7 +47,7 @@ export const works = [
 		title: "GPT - Clone",
 		subTitle: "Merely a Replica of chatGPT",
 		stack: "Django, Tailwind, mysqlite",
-		link: "sample",
+		link: "",
 	},
 
 	{
