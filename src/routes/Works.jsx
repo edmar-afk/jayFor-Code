@@ -1,4 +1,5 @@
-import Cards from "../components/Cards";import Loader from "../components/Loader";import { works } from "../components/data/Links";import { useState, useEffect } from "react";
+import Cards from "../components/Cards";import Loader from "../components/Loader";import ChatBot from "../components/chatBot";
+import { works } from "../components/data/Links";import { useState, useEffect } from "react";
 function Works() {
 	const [loader, setLoader] = useState(true);
 
@@ -39,6 +40,7 @@ function Works() {
 					})}
 				</div>
 			</div>
+			<ChatBot/>
 		</>
 	);
 }

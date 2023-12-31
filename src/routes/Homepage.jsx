@@ -1,7 +1,9 @@
-import { useEffect, useState } from "react";import Banner from "../components/homepage/Banner";
+import { useEffect, useState } from "react";
+import Banner from "../components/homepage/Banner";
 import Info from "../components/homepage/Info";
 import Comments from "../components/homepage/Comments";
 import Loader from "../components/Loader";
+import ChatBot from "../components/chatBot";
 function Homepage() {
 	const [loader, setLoader] = useState(true);
 
@@ -10,7 +12,6 @@ function Homepage() {
 			setLoader(false);
 		}, 2000);
 	}, []);
-
 
 	if (loader) {
 		return (
@@ -25,7 +26,8 @@ function Homepage() {
 			<main className="space-y-16 mb-2">
 				<Banner />
 				<Info />
-				<Comments/>
+				<Comments />
+				<ChatBot />
 			</main>
 		</>
 	);

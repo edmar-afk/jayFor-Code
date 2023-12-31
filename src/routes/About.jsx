@@ -7,6 +7,7 @@ import { references } from "../components/data/Links";
 import { useState, useEffect } from "react";
 import me from "../assets/img/favicon.png";
 import Loader from "../components/Loader";
+import ChatBot from "../components/chatBot";
 function About() {
 	const [loader, setLoader] = useState(true);
 
@@ -189,6 +190,8 @@ function About() {
 					</div>
 				</div>
 			</div>
+
+			<ChatBot/>
 		</>
 	);
 }

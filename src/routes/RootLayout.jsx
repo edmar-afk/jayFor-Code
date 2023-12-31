@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import ChatBot from "../components/chatBot";
+
 
 function RootLayout() {
 	return (
@@ -10,7 +10,7 @@ function RootLayout() {
 			<div className="mb-24">
 				<Outlet />
 			</div>
-			<ChatBot/>
+			
 			<Footer />
 		</>
 	);
