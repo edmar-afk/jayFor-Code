@@ -1,4 +1,10 @@
-import { faHouse } from "@fortawesome/free-solid-svg-icons";import { faBriefcase } from "@fortawesome/free-solid-svg-icons";import { faUserAlt } from "@fortawesome/free-solid-svg-icons";import { faLinkedin } from "@fortawesome/free-brands-svg-icons";import { faFacebook } from "@fortawesome/free-brands-svg-icons";import { faGithub } from "@fortawesome/free-brands-svg-icons";import { faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faHouse } from "@fortawesome/free-solid-svg-icons";import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
+import { faShop } from "@fortawesome/free-solid-svg-icons";
+import { faUserAlt } from "@fortawesome/free-solid-svg-icons";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faFacebook } from "@fortawesome/free-brands-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faSmile } from "@fortawesome/free-solid-svg-icons";
 import { faAngry } from "@fortawesome/free-solid-svg-icons";
 import { faFrown } from "@fortawesome/free-solid-svg-icons";
@@ -17,6 +23,7 @@ export const navLink = [
 	{ id: 1, icon: faHouse, name: "Home", color: "text-cyan-400", href: "/" },
 	{ id: 2, icon: faBriefcase, name: "Works", color: "text-orange-400", href: "/works" },
 	{ id: 3, icon: faUserAlt, name: "About", color: "text-blue-400", href: "/about" },
+	{ id: 4, icon: faShop, name: "Shop", color: "text-orange-400", href: "/shop" },
 ];
 export const socialLinks = [
 	{ id: 1, name: "Facebook", icon: faFacebook, link: "https://www.facebook.com/jayjanezkieO3" },

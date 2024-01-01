@@ -1,8 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";import { faShop } from "@fortawesome/free-solid-svg-icons";
 import { navLink } from "./data/Links";
 import { Link } from "react-router-dom";
-function NavModal(props) {
-    const toggle = props
+function NavModal() {
+ 
 	return (
 		<div className="lg:hidden">
 			<div
@@ -19,7 +19,7 @@ function NavModal(props) {
 									key={id}>
 									<Link
 										to={href}
-										onClick={toggle}
+										
 										className="block md:px-4 transition hover:text-cyan-400 hover:animate-pulse ">
 										<span className="">
 											<FontAwesomeIcon

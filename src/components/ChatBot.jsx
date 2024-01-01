@@ -9,7 +9,7 @@ function ChatBot() {
 				data-tooltip-content="Chatbot not yet Available">
 				<FontAwesomeIcon
 					icon={faRobot}
-					className="text-2xl sm:text-4xl"
+					className="text-2xl sm:text-3xl"
 				/>
 				<Tooltip
 					id="chatBot"
