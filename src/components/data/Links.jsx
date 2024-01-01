@@ -1,16 +1,20 @@
-import { faHouse } from "@fortawesome/free-solid-svg-icons";import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
-import { faShop } from "@fortawesome/free-solid-svg-icons";
-import { faUserAlt } from "@fortawesome/free-solid-svg-icons";
-import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faFacebook } from "@fortawesome/free-brands-svg-icons";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faPhone } from "@fortawesome/free-solid-svg-icons";
-import { faSmile } from "@fortawesome/free-solid-svg-icons";
-import { faAngry } from "@fortawesome/free-solid-svg-icons";
-import { faFrown } from "@fortawesome/free-solid-svg-icons";
-import { faFaceGrinStars } from "@fortawesome/free-solid-svg-icons";
-import { faFaceGrimace } from "@fortawesome/free-solid-svg-icons";
-import { faMailBulk } from "@fortawesome/free-solid-svg-icons";
+import { faLinkedin, faFacebook, faGithub } from "@fortawesome/free-brands-svg-icons";
+import {
+	faHouse,
+	faUserAlt,
+	faBriefcase,
+	faPhone,
+	faShop,
+	faMailBulk,
+	faSmile,
+	faAngry,
+	faFrown,
+	faFaceGrinStars,
+	faFaceGrimace,
+	faThumbsUp,
+	faEye,
+	faStar,
+} from "@fortawesome/free-solid-svg-icons";
 import djangoIcon from "../../assets/img/django-icon.png";
 import reactIcon from "../../assets/img/react-icon.png";
 import tailwindIcon from "../../assets/img/tailwind-icon.png";
@@ -19,6 +23,7 @@ import capstone from "../../assets/img/capstone.png";
 import product1 from "../../assets/img/products/product1.png";
 import shopee from "../../assets/img/shopee.png";
 import me from "../../assets/img/favicon.png";
+
 export const navLink = [
 	{ id: 1, icon: faHouse, name: "Home", color: "text-cyan-400", href: "/" },
 	{ id: 2, icon: faBriefcase, name: "Works", color: "text-orange-400", href: "/works" },
@@ -183,5 +188,29 @@ export const comments = [
 		satisfaction: "Angry Client",
 		date: "Dec. 31, 2023",
 		icon: faAngry,
+	},
+];
+
+export const overview = [
+	{
+		id: 1,
+		name: "Likes",
+		count: 100,
+		icon: faThumbsUp,
+		info: "Hit the like icon if you love me.",
+	},
+	{
+		id: 2,
+		name: "Views",
+		count: 100,
+		icon: faEye,
+		info: "How do I know you viewed my site?",
+	},
+	{
+		id: 3,
+		name: "Rate",
+		count: 4.5,
+		icon: faStar,
+		info: "Rates are based on my clients",
 	},
 ];

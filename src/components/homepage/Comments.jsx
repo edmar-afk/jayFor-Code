@@ -12,7 +12,7 @@ function Comments() {
 					Cheers to success! 🌟🎉
 				</p>
 			</div>
-			<div className="flex flex-row justify-evenly flex-wrap">
+			<div className="flex flex-row justify-evenly flex-wrap p-2 sm:p-8">
 				{comments.map((clients) => {
 					const { id, imgUrl, name, rate, feedback, satisfaction, date, icon } = clients;
 					return (

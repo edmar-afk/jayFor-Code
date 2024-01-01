@@ -1,7 +1,6 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";import { navLink } from "./data/Links";import { faCircleChevronDown } from "@fortawesome/free-solid-svg-icons";
-import Logo from "../assets/logo.png";
-import { Link } from "react-router-dom";
-import me from "../assets/img/favicon.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";import { navLink } from "./data/Links";import { faCircleChevronDown } from "@fortawesome/free-solid-svg-icons";import Logo from "../assets/logo.png";import { Link } from "react-router-dom";import me from "../assets/img/favicon.png";
+import { overview } from "./data/Links";
+import { Tooltip } from "react-tooltip";
 function Navbar() {
 	return (
 		<>
@@ -17,6 +16,7 @@ function Navbar() {
 									src={Logo}
 									width="40"
 									alt=""
+									draggable="false"
 								/>
 								<span className="text-lg sm:text-2xl font-bold text-white hidden sm:block">JayForCode</span>
 							</Link>
@@ -80,30 +80,43 @@ function Navbar() {
 								</button>
 
 								<div
-									className="z-50 hidden my-4 text-base list-none divide-y rounded-lg shadow bg-gray-700 divide-gray-600"
+									className="z-50 hidden break-words my-4 text-base list-none divide-y rounded-lg shadow bg-gray-700 divide-gray-600"
 									id="user-dropdown">
 									<div className="px-4 py-3">
 										<span className="block text-sm text-white">Edmar Jay O. Heolin</span>
 										<span className="block text-sm truncate text-gray-400">jaywrsnp6@gmail.com</span>
 									</div>
+
 									<ul
 										className="py-2"
 										aria-labelledby="user-menu-button">
-										<li>
-											<p className="block px-4 py-2 text-sm hover:bg-gray-600 text-gray-200 hover:text-white">
-												Views: 87
-											</p>
-										</li>
-										<li>
-											<p className="block px-4 py-2 text-sm hover:bg-gray-600 text-gray-200 hover:text-white">
-												Likes: 90
-											</p>
-										</li>
-										<li>
-											<p className="block px-4 py-2 text-sm hover:bg-gray-600 text-gray-200 hover:text-white">
-												Rate: 5
-											</p>
-										</li>
+										<div className="px-4 text-xs text-orange-400 mb-4 text-center leading-1">
+											<p>Everything below is </p>
+											<p>just a dummy data.</p>
+											<p>Still working on database.</p>
+										</div>
+										{overview.map((details) => {
+											const { id, name, count, icon, info } = details;
+											return (
+												<li
+													key={id}
+													className="flex items-center"
+													data-tooltip-id={id}
+													data-tooltip-content={info}>
+													<p className="block px-4 py-2 text-sm hover:bg-gray-600 text-gray-200 hover:text-white">
+														<FontAwesomeIcon
+															icon={icon}
+															className="text-cyan-400 text-lg mr-2 animate-pulse"
+														/>{" "}
+														{name}: {count}
+													</p>
+													<Tooltip
+														id={id}
+														style={{ backgroundColor: "rgb(37 99 235)", color: "#fff", fontWeight: "bold" }}
+													/>
+												</li>
+											);
+										})}
 									</ul>
 								</div>
 							</div>
