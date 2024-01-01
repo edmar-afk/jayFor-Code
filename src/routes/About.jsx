@@ -8,7 +8,6 @@ import { useState, useEffect } from "react";
 import me from "../assets/img/favicon.png";
 import Loader from "../components/Loader";
 import ChatBot from "../components/ChatBot";
-import Navbar from "../components/Navbar";
 function About() {
 	const [loader, setLoader] = useState(true);
 
@@ -27,7 +26,6 @@ function About() {
 	}
 	return (
 		<>
-			<Navbar/>
 			<div className="mt-36">
 				<div className="p-4 text-white">
 					<div className="flex flex-col md:flex-row mb-12">

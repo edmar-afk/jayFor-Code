@@ -4,7 +4,6 @@ import Info from "../components/homepage/Info";
 import Comments from "../components/homepage/Comments";
 import Loader from "../components/Loader";
 import ChatBot from "../components/ChatBot";
-import Navbar from "../components/Navbar";
 function Homepage() {
 	const [loader, setLoader] = useState(true);
 
@@ -25,7 +24,6 @@ function Homepage() {
 	return (
 		<>
 			<main className="space-y-16 mb-2">
-				<Navbar/>
 				<Banner />
 				<Info />
 				<Comments />

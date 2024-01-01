@@ -1,15 +1,13 @@
-import NotFound from "../components/NotFound"
-import ChatBot from "../components/ChatBot"
-import Navbar from "../components/Navbar"
+import NotFound from "../components/NotFound";
+import ChatBot from "../components/ChatBot";
 
 function Shop() {
-  return (
-    <>
-      <Navbar/>
-      <NotFound />
-      <ChatBot/>
-    </>
-  )
+	return (
+		<>
+			<NotFound />
+			<ChatBot />
+		</>
+	);
 }
 
-export default Shop
+export default Shop;

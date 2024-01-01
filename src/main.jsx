@@ -3,19 +3,19 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import Works from "./routes/Works.jsx";
 import "./index.css";
-import { createBrowserRouter, RouterProvider, BrowserRouter } from "react-router-dom";
-import RootLayout from "./routes/RootLayout.jsx";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import About from "./routes/About.jsx";
 import Shop from "./routes/Shop.jsx";
+import Homepage from "./routes/Homepage.jsx";
 
 const router = createBrowserRouter([
 	{
 		path: "/",
-		element: <RootLayout />,
+		element: <App />,
 		children: [
 			{
 				path: "/",
-				element: <App />,
+				element: <Homepage />,
 			},
 			{
 				path: "/works",
@@ -35,8 +35,6 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
 	<React.StrictMode>
-		<BrowserRouter basename="/jay-for-code">
-			<RouterProvider router={router} />
-		</BrowserRouter>
+		<RouterProvider router={router} />
 	</React.StrictMode>
 );

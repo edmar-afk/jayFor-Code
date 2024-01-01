@@ -3,7 +3,6 @@ import Loader from "../components/Loader";
 import ChatBot from "../components/ChatBot";
 import { works } from "../components/data/Links";
 import { useState, useEffect } from "react";
-import Navbar from "../components/Navbar";
 function Works() {
 	const [loader, setLoader] = useState(true);
 
@@ -22,7 +21,7 @@ function Works() {
 	}
 	return (
 		<>
-			<Navbar/>
+			
 			<div className="p-3 sm:p-12 mt-32">
 				<h1 className="text-white font-bold text-xl md:text-3xl xl:text-4xl text-center">Works of Art</h1>
 				<p className="mt-4 text-gray-300 italic font-semibold text-center mb-20">
