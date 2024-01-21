@@ -1,5 +1,4 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMugSaucer } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";import { faMugSaucer } from "@fortawesome/free-solid-svg-icons";
 import { faNoteSticky } from "@fortawesome/free-solid-svg-icons";
 import Gradient from "../../components/Gradient";
 function Banner() {
@@ -12,18 +11,18 @@ function Banner() {
 						<div className="lg:w-2/3 text-center mx-auto">
 							<h1 className="text-purple-800 font-bold text-4xl md:text-6xl xl:text-7xl">
 								Elevate Code <br />
-								<span className="text-white"> Illuminate Innovation.</span>
+								<span className="text-white">Illuminate Innovation.</span>
 							</h1>
 							<p className="mt-8 text-gray-300 italic font-semibold">
 								The computer is incredibly fast, accurate, and stupid. Man is incredibly slow, inaccurate, and
 								brilliant. The marriage of the two is a force beyond calculation
 							</p>
-							<div className="mt-16 flex flex-wrap justify-center gap-y-4 gap-x-6">
+							<div className="mt-16 flex flex-row flex-wrap justify-center gap-y-4 gap-x-6">
 								<a
 									rel="noreferrer"
 									href="https://www.paypal.com/paypalme/my/settings?flow=cmV0dXJuVXJsPWh0dHBzOi8vd3d3LnBheXBhbC5jb20vbXlhY2NvdW50L3RyYW5zZmVyL2hvbWVwYWdlL3JlcXVlc3QmY2FuY2VsVXJsPWh0dHBzOi8vd3d3LnBheXBhbC5jb20vbXlhY2NvdW50L3RyYW5zZmVyL2hvbWVwYWdlL3JlcXVlc3Q="
 									target="_blank"
-									className="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:bg-gray-700 border-2 border-purple-400 rounded-3xl before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max">
+									className="relative flex h-11 items-center justify-center px-4 md:px-6 border-2 border-purple-400 rounded-3xl hover:bg-purple-400 duration-300 before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 w-max">
 									<span className="relative text-base font-semibold text-white">
 										<FontAwesomeIcon
 											icon={faMugSaucer}
@@ -36,7 +35,7 @@ function Banner() {
 									rel="noreferrer"
 									href="{% static 'files/Resume.pdf' %}"
 									target="_blank"
-									className="relative flex bg-purple-400 h-11 w-full items-center justify-center px-6 rounded-full hover:scale-110 duration-300 sm:w-max">
+									className="relative flex bg-purple-400 h-11 items-center justify-center px-4 md:px-6 rounded-full hover:scale-110 duration-300 w-max">
 									<span className="relative text-base font-semibold text-white">
 										<FontAwesomeIcon
 											icon={faNoteSticky}
@@ -75,7 +74,6 @@ function Banner() {
 							</div>
 						</div>
 					</div>
-					
 				</div>
 			</div>
 		</>
