@@ -22,10 +22,10 @@ import shopee from "../../assets/img/shopee.png";
 import me from "../../assets/img/favicon.png";
 
 export const navLink = [
-	{ id: 1, icon: faHouse, name: "Home", color: "text-cyan-400", href: "/" },
-	{ id: 2, icon: faBriefcase, name: "Works", color: "text-orange-400", href: "/works" },
-	{ id: 3, icon: faUserAlt, name: "About", color: "text-blue-400", href: "/about" },
-	{ id: 4, icon: faShop, name: "Shop", color: "text-purple-400", href: "/shop" },
+	{ id: 1, icon: faHouse, name: "Home", color: "text-cyan-400",hidden: '', href: "/" },
+	{ id: 2, icon: faBriefcase, name: "Works", color: "text-orange-400",hidden: '', href: "/works" },
+	{ id: 3, icon: faUserAlt, name: "About", color: "text-blue-400",hidden: '', href: "/about" },
+	{ id: 4, icon: faShop, name: "Shop", color: "text-purple-400",hidden: 'hidden', href: "/shop" },
 ];
 export const socialLinks = [
 	{ id: 1, name: "Facebook", icon: faFacebook, link: "https://www.facebook.com/jayjanezkieO3" },

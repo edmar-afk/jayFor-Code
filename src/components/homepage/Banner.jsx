@@ -53,21 +53,21 @@ function Banner() {
 				<div className="bg-gray-900 antialiased">
 					<div className="max-w-screen-xl px-4 py-24 mx-auto lg:px-6">
 						<div className="grid grid-cols-1 mt-4 text-center sm:mt-4 gap-x-20 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
-							<div className="space-y-4">
+							<div className="space-y-4 bg-slate-900 p-8 rounded-xl">
 								<h3 className="text-2xl font-bold leading-tight text-purple-400">Frontend Developer</h3>
 								<p className="text-lg font-normal text-gray-400">
 									Specializes in creating Landing pages and any font-end designs.
 								</p>
 							</div>
 
-							<div className="space-y-4">
+							<div className="space-y-4 bg-slate-900 p-8 rounded-xl">
 								<h3 className="text-2xl font-bold leading-tight text-purple-400">Backend Developer</h3>
 								<p className="text-lg font-normal text-gray-400">
 									Specializes in creating interactive fullstack webapp.
 								</p>
 							</div>
 
-							<div className="space-y-4">
+							<div className="space-y-4 bg-slate-900 p-8 rounded-xl">
 								<h3 className="text-2xl font-bold leading-tight text-purple-400">Mobile App Developer</h3>
 								<p className="text-lg font-normal text-gray-400">
 									Noob in creating mobile app. For personal hobbies only.

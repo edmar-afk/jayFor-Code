@@ -1,8 +1,9 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";import { faShop } from "@fortawesome/free-solid-svg-icons";
+/* eslint-disable react/prop-types */import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShop } from "@fortawesome/free-solid-svg-icons";
 import { navLink } from "./data/Links";
 import { Link } from "react-router-dom";
-function NavModal() {
- 
+function NavModal(props) {
+	const { hideModal } = props;
 	return (
 		<div className="lg:hidden">
 			<div
@@ -12,15 +13,15 @@ function NavModal() {
 				<div className="text-gray-300 w-full">
 					<ul className="tracking-wide font-medium flex-col flex gap-6">
 						{navLink.map((link) => {
-							const { id, icon, color, name, href } = link;
+							const { id, icon, color, name, href, hidden } = link;
 							return (
 								<li
 									className="hover:scale-110 duration-300"
 									key={id}>
 									<Link
 										to={href}
-										
-										className="block md:px-4 transition hover:text-cyan-400 hover:animate-pulse ">
+										onClick={hideModal}
+										className={`block md:px-4 transition hover:text-cyan-400 hover:animate-pulse ${hidden}`}>
 										<span className="">
 											<FontAwesomeIcon
 												icon={icon}
