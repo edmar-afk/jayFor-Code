@@ -1,4 +1,5 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";import { faMugSaucer } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMugSaucer } from "@fortawesome/free-solid-svg-icons";
 import { faNoteSticky } from "@fortawesome/free-solid-svg-icons";
 import Gradient from "../../components/Gradient";
 function Banner() {

@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";import Banner from "./homepage/Banner";
-import Info from "./homepage/Info";
-import Comments from "./homepage/Comments";
+import { useEffect, useState } from "react";
+import Banner from "../components/homepage/Banner";
+import Info from "../components/homepage/Info";
+import Comments from "../components/homepage/Comments";
 import Loader from "../components/Loader";
 import ChatBot from "../components/ChatBot";
 function Homepage() {
