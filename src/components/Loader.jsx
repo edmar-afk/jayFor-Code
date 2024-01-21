@@ -4,7 +4,7 @@ function Loader() {
 		<img
 			src={logo}
 			alt=""
-			className="mx-auto mt-60 mb-60 animate-bounce w-16 sm:w-32"
+			className="mx-auto mt-60 mb-96 animate-bounce w-16 sm:w-32"
 		/>
 	);
 }

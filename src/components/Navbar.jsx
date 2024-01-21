@@ -1,4 +1,9 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";import { navLink } from "./data/Links";import { faCircleChevronDown } from "@fortawesome/free-solid-svg-icons";import Logo from "../assets/logo.png";import { Link } from "react-router-dom";import me from "../assets/img/favicon.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { navLink } from "./data/Links";
+import { faCircleChevronDown } from "@fortawesome/free-solid-svg-icons";
+import Logo from "../assets/logo.png";
+import { Link } from "react-router-dom";
+import me from "../assets/img/favicon.png";
 import { overview } from "./data/Links";
 import { Tooltip } from "react-tooltip";
 function Navbar() {
@@ -27,7 +32,7 @@ function Navbar() {
 								<button
 									type="button"
 									data-dropdown-toggle="language-dropdown-menu"
-									className="inline-flex items-center font-medium justify-center px-4 py-2 text-sm border border-cyan-400 hover:bg-cyan-400 text-white rounded-lg cursor-pointer hover:text-black duration-300">
+									className="inline-flex items-center font-medium justify-center px-4 py-2 text-sm border border-purple-400 hover:bg-purple-400 text-white rounded-lg cursor-pointer hover:text-black duration-300">
 									<FontAwesomeIcon
 										icon={faCircleChevronDown}
 										className="mr-1 animate-pulse"
@@ -52,7 +57,7 @@ function Navbar() {
 														<div className="inline-flex items-center">
 															<FontAwesomeIcon
 																icon={icon}
-																className={`mr-2 ani ${color}`}
+																className={`mr-2 animate-pulse ${color}`}
 															/>
 															{name}
 														</div>
@@ -67,7 +72,7 @@ function Navbar() {
 							<div className="md:order-2 mx-3 sm:mx-2">
 								<button
 									type="button"
-									className="flex text-sm bg-gray-800 rounded-full focus:ring-1 focus:ring-cyan-300 hover:scale-110 duration-300"
+									className="flex text-sm bg-gray-800 rounded-full focus:ring-1 focus:ring-purple-300 hover:scale-110 duration-300"
 									id="user-menu-button"
 									data-dropdown-toggle="user-dropdown"
 									data-dropdown-placement="bottom">
@@ -106,7 +111,7 @@ function Navbar() {
 													<p className="block px-4 py-2 text-sm hover:bg-gray-600 text-gray-200 hover:text-white">
 														<FontAwesomeIcon
 															icon={icon}
-															className="text-cyan-400 text-lg mr-2 animate-pulse"
+															className="text-purple-400 text-lg mr-2 animate-pulse"
 														/>{" "}
 														{name}: {count}
 													</p>

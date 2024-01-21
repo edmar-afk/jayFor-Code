@@ -1,17 +1,17 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
-import bannerLogo from '../../assets/img/bannerLogo.png'
+import cod from "../../assets/code3.png";
 function Info() {
 	return (
 		<>
-			<div className="max-w-7xl mx-auto px-6 md:px-12 xl:px-6">
-				<div className="space-y-6 justify-between text-gray-600 md:flex flex-row-reverse md:gap-6 md:space-y-0 lg:gap-12 lg:items-center">
+			<div className="max-w-full mx-auto px-3 lg:px-32 bg-gray-800 py-12">
+				<div className="space-y-6 justify-between text-gray-600 md:flex flex-row-reverse md:gap-6 md:space-y-0 lg:gap-12 items-center">
 					<div className="md:5/12 lg:w-1/2 hidden md:block">
 						<img
-							src={bannerLogo}
+							src={cod}
 							alt="image"
 							loading="lazy"
-							draggable='false'
+							draggable="false"
 							width=""
 							height=""
 							className="w-full"

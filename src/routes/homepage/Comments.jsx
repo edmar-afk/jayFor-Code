@@ -1,5 +1,5 @@
-import CommentsCard from "../CommentsCard";
-import { comments } from "../data/Links";
+import CommentsCard from "../../components/CommentsCard";
+import { comments } from "../../components/data/Links";
 function Comments() {
 	return (
 		<>

@@ -1,7 +1,4 @@
-import { faLinkedin, faFacebook, faGithub } from "@fortawesome/free-brands-svg-icons";
-import {
-	faHouse,
-	faUserAlt,
+import { faLinkedin, faFacebook, faGithub } from "@fortawesome/free-brands-svg-icons";import {	faHouse,	faUserAlt,
 	faBriefcase,
 	faPhone,
 	faShop,
@@ -28,7 +25,7 @@ export const navLink = [
 	{ id: 1, icon: faHouse, name: "Home", color: "text-cyan-400", href: "/" },
 	{ id: 2, icon: faBriefcase, name: "Works", color: "text-orange-400", href: "/works" },
 	{ id: 3, icon: faUserAlt, name: "About", color: "text-blue-400", href: "/about" },
-	{ id: 4, icon: faShop, name: "Shop", color: "text-orange-400", href: "/shop" },
+	{ id: 4, icon: faShop, name: "Shop", color: "text-purple-400", href: "/shop" },
 ];
 export const socialLinks = [
 	{ id: 1, name: "Facebook", icon: faFacebook, link: "https://www.facebook.com/jayjanezkieO3" },
@@ -48,7 +45,8 @@ export const works = [
 		id: 1,
 		imgUrl: capstone,
 		title: "Isumbong",
-		subTitle: "My solo Capstone Project",
+		subTitle:
+			"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem repudiandae illo magni assumenda saepe soluta nobis cupiditate natus fuga eaque nemo minima libero molestias maiores, animi aliquid dolores architecto nesciunt?",
 		stack: "Django, Tailwind, MySQL",
 		link: "",
 	},
@@ -57,7 +55,8 @@ export const works = [
 		id: 2,
 		imgUrl: product1,
 		title: "GPT - Clone",
-		subTitle: "Merely a Replica of chatGPT",
+		subTitle:
+			"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem repudiandae illo magni assumenda saepe soluta nobis cupiditate natus fuga eaque nemo minima libero molestias maiores, animi aliquid dolores architecto nesciunt?",
 		stack: "Django, Tailwind, mysqlite",
 		link: "",
 	},
@@ -66,7 +65,8 @@ export const works = [
 		id: 3,
 		imgUrl: shopee,
 		title: "Shopee Page Clone",
-		subTitle: "I replicated a website to alleviate my ennui",
+		subTitle:
+			"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem repudiandae illo magni assumenda saepe soluta nobis cupiditate natus fuga eaque nemo minima libero molestias maiores, animi aliquid dolores architecto nesciunt?",
 		stack: "Django, Tailwind, MySQL",
 		link: "",
 	},

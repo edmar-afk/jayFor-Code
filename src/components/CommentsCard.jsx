@@ -7,7 +7,7 @@ function CommentsCard(props) {
 	const { imgUrl, name, rate, feedback, satisfaction, date, icon } = props;
 	return (
 		<>
-			<div className="w-[350px] relative bg-slate-900 mx-auto border border-cyan-400 px-6 py-8 rounded-lg mb-6 hover:border-blue-400 hover:scale-90 hover:shadow-2xl hover:shadow-blue-400 duration-300">
+			<div className="w-[350px] relative bg-gray-900 mx-auto  px-6 py-8 rounded-lg mb-6 hover:border-purple-400 hover:scale-90 hover:shadow-2xl hover:shadow-purple-400 duration-300">
 				<div className="flex items-center mb-6">
 					<img
 						src={imgUrl}
@@ -25,7 +25,7 @@ function CommentsCard(props) {
 
 				<div className="flex justify-between items-center absolute bottom-4">
 					<div>
-						<p className="text-cyan-400 hover:text-gray-700 mr-4">
+						<p className="text-purple-400 hover:text-gray-700 mr-4">
 							<FontAwesomeIcon
 								icon={faCalendarCheck}
 								className="mr-2"

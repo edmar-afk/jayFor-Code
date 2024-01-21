@@ -8,7 +8,7 @@ function App() {
 		<>
 			<>
 				<Navbar />
-				<div className="mb-24 mt-12">
+				<div className="mb-24 mt-8">
 					<Outlet />
 				</div>
 				

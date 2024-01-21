@@ -1,53 +1,42 @@
+/* eslint-disable react/no-unescaped-entities */
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCalendarAlt } from "@fortawesome/free-solid-svg-icons";
 import { socialLinks } from "./data/Links";
-import Logo from "../assets/logo.png";
 function Footer() {
 	return (
 		<>
 			<footer className="bg-gray-800">
-				<div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-					<div className="md:flex md:justify-between">
-						<div className="mb-6 md:mb-0">
-							<a
-								href="https://flowbite.com/"
-								className="flex items-center">
-								<img
-									src={Logo}
-									width="30"
-									className="h-8 me-3"
-									alt="FlowBite Logo"
-								/>
-								<span className="self-center text-2xl font-semibold whitespace-nowrap text-white">
-									Edmar Jay Heolin
-								</span>
-							</a>
-						</div>
-					</div>
-					<hr className="my-6 border-gray-200 mx-auto lg:my-8" />
-					<div className="sm:flex sm:items-center sm:justify-between">
-						<span className="text-sm sm:text-center text-gray-400">
-							© 2023 JayForCode.
-							<span className="text-green-500 font-bold"> Last Update: Jan. 1, 2024.</span>
-						</span>
-						<div className="flex mt-4 justify-center sm:mt-0">
-							{socialLinks.map((social) => {
-								const {id, link, icon, name} = social
+				<div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
+					<p
+						
+						className="inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm rounded-full bg-purple-900 text-white hover:bg-purple-700 duration-200"
+						role="alert">
+						<span className="text-xs bg-purple-400 hover:bg-purple-200 duration-200 rounded-full text-white font-bold px-4 py-1.5 mr-3">Updated</span>
+						<span className="text-sm font-medium mr-">January 21, 2024 <FontAwesomeIcon icon={faCalendarAlt} className="ml-1"/></span>
+						
+					</p>
+					<h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl text-white">
+						Crafting Digital Excellence
+					</h1>
+					<p className="mb-8 text-lg font-normal lg:text-xl sm:px-16 xl:px-48 text-gray-400">
+						Freelance Developer Redefining Possibilities and Building Sustainable Digital Ecosystems for Lasting Success
+					</p>
+					
+					<div className="px-4 mx-auto text-center md:max-w-screen-md lg:max-w-screen-lg lg:px-36">
+						<span className="font-semibold text-gray-400 uppercase text-xl">VISIT ME IN</span>
+						<div className="flex flex-wrap justify-center items-center mt-8 text-gray-500 sm:justify-between">
+							{socialLinks.map((links) => {
 								return (
 									<a
-										key={id}
-										href={link}
-										rel="noreferrer"
-										target="_blank"
-										className="text-gray-500 hover:text-white">
-										<FontAwesomeIcon
-											icon={icon}
-											className="w-8 h-8 hover:scale-125 hover:text-cyan-400 duration-500 mx-2"
-										/>
-										<span className="sr-only">{name}</span>
+										href={links.link} key={links.id} target="_blank" rel="noreferrer"
+										className="mr-5 mb-5 lg:mb-0 hover:text-gray-400 flex items-center">
+										<FontAwesomeIcon icon={links.icon} className="text-5xl" /><span className="text-3xl font-bold ml-2 hidden md:block">{links.name}</span>
 									</a>
 								);
 							})}
+							
 						</div>
+						
 					</div>
 				</div>
 			</footer>
