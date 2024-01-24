@@ -2,6 +2,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMugSaucer } from "@fortawesome/free-solid-svg-icons";
 import { faNoteSticky } from "@fortawesome/free-solid-svg-icons";
 import Gradient from "../../components/Gradient";
+import { faPython, faReact } from "@fortawesome/free-brands-svg-icons";
+import BreakLine from '../BreakLine'
 function Banner() {
 	return (
 		<>
@@ -10,11 +12,11 @@ function Banner() {
 				<div className="max-w-7xl mx-auto px-6 md:px-12 xl:px-6">
 					<div className="relative pt-24 md:pt-36 ml-auto">
 						<div className="lg:w-2/3 text-center mx-auto">
-							<h1 className="text-purple-800 font-bold text-4xl md:text-6xl xl:text-7xl">
-								Elevate Code <br />
-								<span className="text-white">Illuminate Innovation.</span>
+							<h1 className="bg-gradient-to-r from-cyan-400 via-purple-500 to-purple-800 bg-clip-text text-transparent font-bold text-3xl md:text-6xl xl:text-7xl">
+								Catalyzing Growth <br />
+								<span className="">Illuminate Innovation.</span>
 							</h1>
-							<p className="mt-8 text-gray-300 italic font-semibold">
+							<p className="mt-8 text-gray-300 italic font-semibold text-sm md:text-lg">
 								The computer is incredibly fast, accurate, and stupid. Man is incredibly slow, inaccurate, and
 								brilliant. The marriage of the two is a force beyond calculation
 							</p>
@@ -52,31 +54,33 @@ function Banner() {
 
 				<div className="bg-gray-900 antialiased">
 					<div className="max-w-screen-xl px-4 py-24 mx-auto lg:px-6">
-						<div className="grid grid-cols-1 mt-4 text-center sm:mt-4 gap-x-20 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
-							<div className="space-y-4 bg-slate-900 p-8 rounded-xl">
-								<h3 className="text-2xl font-bold leading-tight text-purple-400">Frontend Developer</h3>
-								<p className="text-lg font-normal text-gray-400">
-									Specializes in creating Landing pages and any font-end designs.
+						<div className="grid grid-cols-1 mt-4 text-center sm:mt-4 gap-x-20 gap-y-2 md:grid-cols-2">
+							<div className="space-y-4 bg-gradient-to-r from-purple-800 via-purple-900 to-purple-950 hover:bg-gradient-to-br p-4 md:p-8 rounded-xl">
+								<FontAwesomeIcon
+									icon={faReact}
+									className="text-blue-400 text-6xl animate-spin"
+								/>
+								<h3 className="text-2xl font-bold leading-tight text-white">Frontend Developer</h3>
+								<p className="text-lg font-normal text-white">
+									Specializes in creating Landing pages in font-end designs and frameworks.
 								</p>
 							</div>
 
-							<div className="space-y-4 bg-slate-900 p-8 rounded-xl">
-								<h3 className="text-2xl font-bold leading-tight text-purple-400">Backend Developer</h3>
-								<p className="text-lg font-normal text-gray-400">
-									Specializes in creating interactive fullstack webapp.
-								</p>
-							</div>
-
-							<div className="space-y-4 bg-slate-900 p-8 rounded-xl">
-								<h3 className="text-2xl font-bold leading-tight text-purple-400">Mobile App Developer</h3>
-								<p className="text-lg font-normal text-gray-400">
-									Noob in creating mobile app. For personal hobbies only.
+							<div className="space-y-4 bg-gradient-to-r from-purple-800 via-purple-900 to-purple-950 hover:bg-gradient-to-br p-4 md:p-8 rounded-xl">
+								<FontAwesomeIcon
+									icon={faPython}
+									className="text-yellow-400 text-6xl animate-pulse"
+								/>
+								<h3 className="text-2xl font-bold leading-tight text-white">Backend Developer</h3>
+								<p className="text-lg font-normal text-white">
+									Specializes in creating interactive fullstack webapp using Python Framework Django.
 								</p>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+			<BreakLine/>
 		</>
 	);
 }

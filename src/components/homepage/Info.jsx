@@ -1,10 +1,11 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import cod from "../../assets/code3.png";
+import BreakLine from "../BreakLine";
 function Info() {
 	return (
 		<>
-			<div className="max-w-full mx-auto px-3 lg:px-32 bg-gray-800 py-12">
+			<div className="max-w-full mx-auto px-3 lg:px-32 py-4">
 				<div className="space-y-6 justify-between text-gray-600 md:flex flex-row-reverse md:gap-6 md:space-y-0 lg:gap-12 items-center">
 					<div className="md:5/12 lg:w-1/2 hidden md:block">
 						<img
@@ -18,7 +19,7 @@ function Info() {
 						/>
 					</div>
 					<div className="md:7/12 lg:w-1/2">
-						<h2 className="text-3xl font-bold md:text-4xl text-white">
+						<h2 className="text-3xl font-bold md:text-4xl bg-gradient-to-tr from-cyan-400 via-purple-500 to-purple-800 bg-clip-text text-transparent">
 							Hello, Im Jay. A freelance Software Engineer from Pob. Guipos Zamboanga del Sur
 						</h2>
 						<p className="my-8 text-gray-300">
@@ -61,6 +62,7 @@ function Info() {
 					</div>
 				</div>
 			</div>
+			<BreakLine/>
 		</>
 	);
 }
