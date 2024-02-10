@@ -82,7 +82,7 @@ export const contactInformation = [
 	},
 	{
 		id: 2,
-		type: "Phone 1",
+		type: "Phone 2",
 		contact: "09510784760",
 		href: "tel: +09510784760",
 		icon: faPhone,

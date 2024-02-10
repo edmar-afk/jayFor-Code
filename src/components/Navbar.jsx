@@ -1,4 +1,8 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";import { navLink } from "./data/Links";import { faCircleChevronDown } from "@fortawesome/free-solid-svg-icons";import Logo from "../assets/logo.png";import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { navLink } from "./data/Links";
+import { faCircleChevronDown } from "@fortawesome/free-solid-svg-icons";
+import Logo from "../assets/logo.png";
+import { Link } from "react-router-dom";
 import me from "../assets/img/favicon.png";
 import { overview } from "./data/Links";
 import { Tooltip } from "react-tooltip";
@@ -60,7 +64,7 @@ function Navbar() {
 									);
 								})}
 							</ul>
-							
+
 							<div className="flex items-center md:order-1 sm:mx-2 lg:hidden">
 								<button
 									type="button"

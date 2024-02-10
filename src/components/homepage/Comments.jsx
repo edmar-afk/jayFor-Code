@@ -1,6 +1,29 @@
+import { useState, useEffect } from "react";
 import CommentsCard from "../../components/CommentsCard";
-import { comments } from "../../components/data/Links";
+import axios from "axios";
+import satisfied from "../../assets/rates/satisfied.png";
+import happy from "../../assets/rates/happy.png";
+import neutral from "../../assets/rates/neutral.png";
+import frustrated from "../../assets/rates/frustrated.png";
+import angry from "../../assets/rates/angry.jpg";
+const url = "http://127.0.0.1:8000/api/";
+
 function Comments() {
+	const [comments, setComments] = useState([]);
+
+	const fetchData = async () => {
+		try {
+			const response = await axios.get(`${url}comments/`);
+			setComments(response.data);
+			console.log(response);
+		} catch (error) {
+			console.log("Error: ", error.response);
+		}
+	};
+
+	useEffect(() => {
+		fetchData();
+	}, []);
 	return (
 		<>
 			<div className="p-4">
@@ -14,17 +37,37 @@ function Comments() {
 			</div>
 			<div className="flex flex-row justify-evenly flex-wrap p-2 sm:p-8">
 				{comments.map((clients) => {
-					const { id, imgUrl, name, rate, feedback, satisfaction, date, icon } = clients;
+					const { id, name, rate, comment, date } = clients;
+					let imageSrc;
+					let rateText;
+					if (rate == 1) {
+						imageSrc = angry;
+						rateText = "Angry Client";
+					} else if (rate == 2) {
+						imageSrc = frustrated;
+						rateText = "Frustrated Client";
+					} else if (rate == 3) {
+						imageSrc = neutral;
+						rateText = "Contented Client";
+					} else if (rate == 4) {
+						imageSrc = happy;
+						rateText = "Happy Client";
+					} else if (rate == 5) {
+						imageSrc = satisfied;
+						rateText = "Satisfied Client";
+					} else {
+						imageSrc = happy;
+					}
+
 					return (
 						<CommentsCard
 							key={id}
-							imgUrl={imgUrl}
 							name={name}
 							rate={rate}
-							feedback={feedback}
-							satisfaction={satisfaction}
+							feedback={comment}
 							date={date}
-							icon={icon}
+							imageSrc={imageSrc}
+							rateText={rateText}
 						/>
 					);
 				})}

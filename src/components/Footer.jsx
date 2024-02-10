@@ -12,7 +12,7 @@ function Footer() {
 						className="inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm rounded-full bg-purple-900 text-white hover:bg-purple-700 duration-200"
 						role="alert">
 						<span className="text-xs bg-purple-400 hover:bg-purple-200 duration-200 rounded-full text-white font-bold px-4 py-1.5 mr-3">Updated</span>
-						<span className="text-sm font-medium mr-">January 21, 2024 <FontAwesomeIcon icon={faCalendarAlt} className="ml-1"/></span>
+						<span className="text-sm font-medium mr-">February 4, 2024 <FontAwesomeIcon icon={faCalendarAlt} className="ml-1"/></span>
 						
 					</p>
 					<h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl text-white">

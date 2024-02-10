@@ -3,7 +3,7 @@ import { faMugSaucer } from "@fortawesome/free-solid-svg-icons";
 import { faNoteSticky } from "@fortawesome/free-solid-svg-icons";
 import Gradient from "../../components/Gradient";
 import { faPython, faReact } from "@fortawesome/free-brands-svg-icons";
-import BreakLine from '../BreakLine'
+import BreakLine from "../BreakLine";
 function Banner() {
 	return (
 		<>
@@ -80,7 +80,7 @@ function Banner() {
 					</div>
 				</div>
 			</div>
-			<BreakLine/>
+			<BreakLine />
 		</>
 	);
 }

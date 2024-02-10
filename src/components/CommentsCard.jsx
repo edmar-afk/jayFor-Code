@@ -1,23 +1,23 @@
-/* eslint-disable react/no-unescaped-entities */ import {	faCalendarCheck,
-	faStar,
-} from "@fortawesome/free-solid-svg-icons";
+import { faCalendarCheck, faSmile, faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 function CommentsCard(props) {
 	// eslint-disable-next-line react/prop-types
-	const { imgUrl, name, rate, feedback, satisfaction, date, icon } = props;
+	const { name, rate, feedback, date, imageSrc, rateText } = props;
+
 	return (
 		<>
-			<div className="w-[350px] relative bg-gray-900 mx-auto  px-6 py-8 rounded-lg mb-6 hover:border-purple-400 hover:scale-90 hover:shadow-2xl hover:shadow-purple-400 duration-300">
+			<div className="w-[350px] relative bg-gray-900 mx-auto  px-6 py-8 rounded-lg mb-6 hover:border-purple-400 hover:cursor-pointer hover:scale-110 hover:shadow-2xl hover:shadow-purple-400 duration-300">
 				<div className="flex items-center mb-6">
 					<img
-						src={imgUrl}
-						alt="Avatar"
-						className="w-12 h-12 rounded-full mr-4"
+						src={imageSrc}
+						alt={rate}
+						className="w-12 h-12 rounded-full mr-4 hover:scale-150 duration-500"
 					/>
 					<div>
 						<div className="text-lg font-medium text-white">{name}</div>
 						<div className="text-sm text-blue-300">
-							<FontAwesomeIcon icon={icon} /> {satisfaction}
+							<FontAwesomeIcon icon={faSmile} /> {rateText}
 						</div>
 					</div>
 				</div>

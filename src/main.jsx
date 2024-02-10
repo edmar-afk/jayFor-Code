@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import About from "./routes/About.jsx";
 import Shop from "./routes/Shop.jsx";
 import Homepage from "./routes/Homepage.jsx";
+import CommentForm from "./routes/CommentForm.jsx";
 
 const router = createBrowserRouter([
 	{
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
 			{
 				path: "/shop",
 				element: <Shop />,
+			},
+			{
+				path: "/comment-030318jayJane",
+				element: <CommentForm />,
 			},
 		],
 	},
