@@ -1,11 +1,10 @@
-import { useEffect, useState } from "react";
-import satisfied from "../../assets/rates/satisfied.png";
+import { useEffect, useState } from "react";import satisfied from "../../assets/rates/satisfied.png";
 import happy from "../../assets/rates/happy.png";
 import neutral from "../../assets/rates/neutral.png";
 import frustrated from "../../assets/rates/frustrated.png";
 import angry from "../../assets/rates/angry.jpg";
 import axios from "axios";
-const url = "http://127.0.0.1:8000/api/";
+const url = "https://portfoliodb.pythonanywhere.com/";
 
 const useCommentForm = () => {
 	const [name, setName] = useState("");

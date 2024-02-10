@@ -1,10 +1,9 @@
-import ChatBot from "../components/ChatBot";
-import { useEffect, useState } from "react";
+import ChatBot from "../components/ChatBot";import { useEffect, useState } from "react";
 import ProductsCard from "../components/ProductsCard";
 import Gradient from "../components/Gradient";
 import axios from "axios";
 
-const url = "http://127.0.0.1:8000/api/";
+const url = "https://portfoliodb.pythonanywhere.com/";
 
 function Shop() {
 	const [products, setProducts] = useState([]);
@@ -15,7 +14,7 @@ function Shop() {
 			const data = response.data.map((product) => ({
 				...product,
 				// Construct the full URL for the image
-				fileName: `http://127.0.0.1:8000${product.fileName}`,
+				fileName: `https://portfoliodb.pythonanywhere.com/${product.fileName}`,
 			}));
 			setProducts(data);
 			console.log(data);
