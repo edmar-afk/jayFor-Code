@@ -1,5 +1,4 @@
-import ChatBot from "../components/ChatBot";
-import { useEffect, useState } from "react";
+import ChatBot from "../components/ChatBot";import { useEffect, useState } from "react";
 import ProductsCard from "../components/ProductsCard";
 import Gradient from "../components/Gradient";
 import axios from "axios";
