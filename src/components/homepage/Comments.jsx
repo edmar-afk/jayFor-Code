@@ -1,5 +1,4 @@
-import { useState, useEffect } from "react";import CommentsCard from "../../components/CommentsCard";import axios from "axios";
-import satisfied from "../../assets/rates/satisfied.png";
+import { useState, useEffect } from "react";import CommentsCard from "../../components/CommentsCard";import axios from "axios";import satisfied from "../../assets/rates/satisfied.png";
 import happy from "../../assets/rates/happy.png";
 import neutral from "../../assets/rates/neutral.png";
 import frustrated from "../../assets/rates/frustrated.png";
@@ -12,7 +11,7 @@ function Comments() {
 
 	const fetchData = async () => {
 		try {
-			const response = await axios.get("http://127.0.0.1:8000/api/comments/");
+			const response = await axios.get("https://heolinapi.pythonanywhere.com/api/comments/");
 			setComments(response.data);
 			console.log(response);
 		} catch (error) {

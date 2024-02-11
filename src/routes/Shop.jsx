@@ -1,4 +1,5 @@
-import ChatBot from "../components/ChatBot";import { useEffect, useState } from "react";
+import ChatBot from "../components/ChatBot";
+import { useEffect, useState } from "react";
 import ProductsCard from "../components/ProductsCard";
 import Gradient from "../components/Gradient";
 import axios from "axios";
@@ -8,7 +9,7 @@ function Shop() {
 
 	const fetchData = async () => {
 		try {
-			const response = await axios.get(`http://127.0.0.1:8000/api/products/`);
+			const response = await axios.get(`https://heolinapi.pythonanywhere.com/api/products/`);
 			setProducts(response.data);
 			console.log(response);
 		} catch (error) {

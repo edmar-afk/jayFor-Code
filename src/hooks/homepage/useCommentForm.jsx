@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";import satisfied from "../../assets/rates/satisfied.png";import happy from "../../assets/rates/happy.png";
+import { useEffect, useState } from "react";
+import satisfied from "../../assets/rates/satisfied.png";
+import happy from "../../assets/rates/happy.png";
 import neutral from "../../assets/rates/neutral.png";
 import frustrated from "../../assets/rates/frustrated.png";
 import angry from "../../assets/rates/angry.jpg";
 import axios from "axios";
-
 
 const useCommentForm = () => {
 	const [name, setName] = useState("");
@@ -71,7 +72,7 @@ const useCommentForm = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
-			const response = await axios.post("http://127.0.0.1:8000/api/comments/", {
+			const response = await axios.post("https://heolinapi.pythonanywhere.com/api/comments/", {
 				name: name,
 				rate: rate,
 				date: currentDate,
