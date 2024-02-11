@@ -1,5 +1,4 @@
-/* eslint-disable react/prop-types */import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faShop } from "@fortawesome/free-solid-svg-icons";
+/* eslint-disable react/prop-types */ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";import { faShop } from "@fortawesome/free-solid-svg-icons";
 import { navLink } from "./data/Links";
 import { Link } from "react-router-dom";
 function NavModal(props) {
@@ -9,14 +8,14 @@ function NavModal(props) {
 			<div
 				aria-hidden="true"
 				className="fixed z-10 inset-0 h-screen w-screen backdrop-blur-2xl transition duration-500 origin-top scale-y-100 bg-gray-900/70 "></div>
-			<div className="flex-col z-20 flex-wrap gap-6 p-8 rounded-3xl border shadow-gray-600/10 justify-end w-full   absolute top-full left-0 transition-all duration-300 origin-top translate-y-0 scale-100 opacity-100 visible shadow-none bg-gray-800 border-gray-700 ">
+			<div className="flex-col z-20 flex-wrap gap-6 p-8 rounded-3xl border shadow-gray-600/10 justify-end w-[80%]   absolute top-full left-[10%] transition-all duration-300 origin-top translate-y-0 scale-100 opacity-100 visible shadow-none bg-gray-800 border-gray-700 ">
 				<div className="text-gray-300 w-full">
 					<ul className="tracking-wide font-medium flex-col flex gap-6">
 						{navLink.map((link) => {
 							const { id, icon, color, name, href, hidden } = link;
 							return (
 								<li
-									className="hover:scale-110 duration-300"
+									className="hover:scale-110 duration-300 flex justify-center"
 									key={id}>
 									<Link
 										to={href}
@@ -36,9 +35,10 @@ function NavModal(props) {
 					</ul>
 				</div>
 
-				<div className="mt-12">
+				<div className="mt-4 flex justify-center">
 					<Link
 						to="/shop"
+						onClick={hideModal}
 						className="relative flex h-9 w-full items-center justify-center px-4 before:absolute before:inset-0 before:rounded-full before:bg-cyan-400 before:transition before:duration-300 hover:before:scale-105 hover:bg-transparent active:duration-75 active:before:scale-95 sm:w-max ">
 						<span className="relative text-sm font-semibold text-white ">
 							<span className="text-gray-800 hover:text-white duration-300 font-bold">
