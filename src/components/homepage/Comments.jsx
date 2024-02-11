@@ -1,18 +1,18 @@
-import { useState, useEffect } from "react";import CommentsCard from "../../components/CommentsCard";
-import axios from "axios";
+import { useState, useEffect } from "react";import CommentsCard from "../../components/CommentsCard";import axios from "axios";
 import satisfied from "../../assets/rates/satisfied.png";
 import happy from "../../assets/rates/happy.png";
 import neutral from "../../assets/rates/neutral.png";
 import frustrated from "../../assets/rates/frustrated.png";
 import angry from "../../assets/rates/angry.jpg";
-const url = "https://portfoliodb.pythonanywhere.com/";
+
+
 
 function Comments() {
 	const [comments, setComments] = useState([]);
 
 	const fetchData = async () => {
 		try {
-			const response = await axios.get(`${url}comments/`);
+			const response = await axios.get("http://127.0.0.1:8000/api/comments/");
 			setComments(response.data);
 			console.log(response);
 		} catch (error) {

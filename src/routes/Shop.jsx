@@ -3,21 +3,14 @@ import ProductsCard from "../components/ProductsCard";
 import Gradient from "../components/Gradient";
 import axios from "axios";
 
-const url = "https://portfoliodb.pythonanywhere.com/";
-
 function Shop() {
 	const [products, setProducts] = useState([]);
 
 	const fetchData = async () => {
 		try {
-			const response = await axios.get(`${url}products/`);
-			const data = response.data.map((product) => ({
-				...product,
-				// Construct the full URL for the image
-				fileName: `https://portfoliodb.pythonanywhere.com/${product.fileName}`,
-			}));
-			setProducts(data);
-			console.log(data);
+			const response = await axios.get(`http://127.0.0.1:8000/api/products/`);
+			setProducts(response.data);
+			console.log(response);
 		} catch (error) {
 			console.log("Error: ", error.response);
 		}
