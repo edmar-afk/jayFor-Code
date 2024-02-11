@@ -1,4 +1,13 @@
-import { useState, useEffect } from "react";import CommentsCard from "../../components/CommentsCard";import axios from "axios";import satisfied from "../../assets/rates/satisfied.png";import happy from "../../assets/rates/happy.png";import neutral from "../../assets/rates/neutral.png";import frustrated from "../../assets/rates/frustrated.png";import angry from "../../assets/rates/angry.jpg";import { faLaughBeam, faSmileBeam, faFaceMeh, faFaceGrimace, faFaceAngry } from "@fortawesome/free-solid-svg-icons";function Comments() {
+import { useState, useEffect } from "react";
+import CommentsCard from "../../components/CommentsCard";
+import axios from "axios";
+import satisfied from "../../assets/rates/satisfied.png";
+import happy from "../../assets/rates/happy.png";
+import neutral from "../../assets/rates/neutral.png";
+import frustrated from "../../assets/rates/frustrated.png";
+import angry from "../../assets/rates/angry.jpg";
+import { faLaughBeam, faSmileBeam, faFaceMeh, faFaceGrimace, faFaceAngry } from "@fortawesome/free-solid-svg-icons";
+function Comments() {
 	const [comments, setComments] = useState([]);
 
 	const fetchData = async () => {
