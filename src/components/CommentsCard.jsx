@@ -1,8 +1,8 @@
-import { faCalendarCheck, faSmile, faStar } from "@fortawesome/free-solid-svg-icons";import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+import { faCalendarCheck, faStar } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function CommentsCard(props) {
 	// eslint-disable-next-line react/prop-types
-	const { name, rate, feedback, date, imageSrc, rateText } = props;
+	const { name, rate, feedback, date, imageSrc, rateText, icon } = props;
 
 	return (
 		<>
@@ -16,7 +16,7 @@ function CommentsCard(props) {
 					<div>
 						<div className="text-lg font-medium text-white">{name}</div>
 						<div className="text-sm text-blue-300">
-							<FontAwesomeIcon icon={faSmile} /> {rateText}
+							<FontAwesomeIcon icon={icon} /> {rateText}
 						</div>
 					</div>
 				</div>

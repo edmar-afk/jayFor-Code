@@ -5,10 +5,12 @@ import neutral from "../../assets/rates/neutral.png";
 import frustrated from "../../assets/rates/frustrated.png";
 import angry from "../../assets/rates/angry.jpg";
 import axios from "axios";
+import { faLaughBeam, faSmileBeam, faFaceMeh, faFaceGrimace, faFaceAngry } from "@fortawesome/free-solid-svg-icons";
 
 const useCommentForm = () => {
 	const [name, setName] = useState("");
 	const [rate, setRate] = useState(3);
+	const [clientEmotion, setClientEmotion] = useState(faLaughBeam);
 	const [currentDate, setCurrentDate] = useState("");
 	const [imageSrc, setImageSrc] = useState(neutral);
 	const [rateText, setRateText] = useState("Contented Client");
@@ -32,26 +34,32 @@ const useCommentForm = () => {
 			case 1:
 				setImageSrc(angry);
 				setRateText("Angry Client");
+				setClientEmotion(faFaceAngry);
 				break;
 			case 2:
 				setImageSrc(frustrated);
 				setRateText("Frustrated Client");
+				setClientEmotion(faFaceGrimace);
 				break;
 			case 3:
 				setImageSrc(neutral);
 				setRateText("Contented Client");
+				setClientEmotion(faFaceMeh);
 				break;
 			case 4:
 				setImageSrc(happy);
 				setRateText("Happy Client");
+				setClientEmotion(faSmileBeam);
 				break;
 			case 5:
 				setImageSrc(satisfied);
 				setRateText("Satisfied Client");
+				setClientEmotion(faLaughBeam);
 				break;
 			default:
 				setImageSrc(neutral);
 				setRateText("Contented Client");
+				setClientEmotion(faFaceMeh);
 				break;
 		}
 	}, [rate]);
@@ -92,6 +100,7 @@ const useCommentForm = () => {
 	return {
 		name,
 		rate,
+		clientEmotion,
 		currentDate,
 		imageSrc,
 		rateText,

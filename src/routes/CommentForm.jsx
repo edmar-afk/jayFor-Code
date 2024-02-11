@@ -6,6 +6,7 @@ function CommentForm() {
 	const {
 		name,
 		rate,
+		clientEmotion,
 		currentDate,
 		imageSrc,
 		rateText,
@@ -38,6 +39,7 @@ function CommentForm() {
 					<CommentsCard
 						name={name}
 						rate={rate}
+						icon={clientEmotion}
 						date={currentDate}
 						imageSrc={imageSrc}
 						rateText={rateText}
