@@ -1,5 +1,4 @@
-import { faCalendarCheck, faSmile, faStar } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCalendarCheck, faSmile, faStar } from "@fortawesome/free-solid-svg-icons";import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function CommentsCard(props) {
 	// eslint-disable-next-line react/prop-types
@@ -7,7 +6,7 @@ function CommentsCard(props) {
 
 	return (
 		<>
-			<div className="w-[350px] relative bg-gray-900 mx-auto  px-6 py-8 rounded-lg mb-6 hover:border-purple-400 hover:cursor-pointer hover:scale-110 hover:shadow-2xl hover:shadow-purple-400 duration-300">
+			<div className="w-[350px] relative bg-gray-900 mx-auto border-l-4 border-purple-400  px-6 py-8 rounded-lg mb-6 hover:border-purple-400 hover:cursor-pointer hover:scale-110 hover:shadow-2xl hover:shadow-purple-400 duration-300">
 				<div className="flex items-center mb-6">
 					<img
 						src={imageSrc}
