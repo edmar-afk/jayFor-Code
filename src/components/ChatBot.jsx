@@ -1,5 +1,4 @@
-/* eslint-disable react/no-unescaped-entities */ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faClose, faCommentDots, faHeadset, faPaperPlane, faRobot } from "@fortawesome/free-solid-svg-icons";
+/* eslint-disable react/no-unescaped-entities */ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";import { faClose, faCommentDots, faHeadset, faPaperPlane, faRobot } from "@fortawesome/free-solid-svg-icons";
 import chatBot from "../assets/img/chatbot.svg";
 import { useState } from "react";
 function ChatBot() {
@@ -8,7 +7,7 @@ function ChatBot() {
 	return (
 		<>
 			{viewChat && (
-				<div className="fixed bottom-28 overflow-y-scroll animate-fade sm:right-0 md:right-16 bg-gray-300 rounded-l-xl h-[500px] w-full max-w-[360px] md:max-w-[400px] z-50">
+				<div className="fixed bottom-24 md:bottom-28 overflow-y-scroll animate-fade right-2 md:right-16 bg-gray-300 rounded-l-xl h-[500px] w-full max-w-[360px] md:max-w-[400px] z-50">
 					<div className="relative">
 						<div className="flex flex-col sticky top-0 bg-purple-500 p-3 rounded-l-xl rounded-bl-none">
 							<div className="flex flex-row justify-between font-bold">
