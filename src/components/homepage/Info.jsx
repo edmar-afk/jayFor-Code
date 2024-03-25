@@ -1,68 +1,48 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser } from "@fortawesome/free-solid-svg-icons";
-import cod from "../../assets/code3.png";
+/* eslint-disable react/no-unescaped-entities */ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";import { faCode } from "@fortawesome/free-solid-svg-icons";
 import BreakLine from "../BreakLine";
+import serviceLogo from "../../assets/img/services.svg";
+import SkillsCard from "../SkillsCard";
 function Info() {
 	return (
 		<>
 			<div className="max-w-full mx-auto px-3 lg:px-32 py-4">
-				<div className="space-y-6 justify-between text-gray-600 md:flex flex-row-reverse md:gap-6 md:space-y-0 lg:gap-12 items-center">
-					<div className="md:5/12 lg:w-1/2 hidden md:block">
+				<div className="flex flex-col justify-center text-center">
+					<FontAwesomeIcon
+						icon={faCode}
+						className="text-white text-2xl mb-4 md:mb-14"
+					/>
+
+					<p className="text-white text-center text-sm md:text-2xl leading-loose mb-4">
+						Crafting new services for my portfolio is akin to weaving intricate lines of code into a tapestry of
+						functionality and innovation. With each service I add, I stitch together a seamless user experience,
+						creating a portfolio that showcases my skills as a software developer
+					</p>
+
+					<div className="flex flex-row justify-evenly">
 						<img
-							src={cod}
-							alt="image"
-							loading="lazy"
+							src={serviceLogo}
+							alt=""
+							className="w-1/2 hidden md:block"
 							draggable="false"
-							width=""
-							height=""
-							className="w-full"
 						/>
-					</div>
-					<div className="md:7/12 lg:w-1/2">
-						<h2 className="text-3xl font-bold md:text-4xl bg-gradient-to-tr from-cyan-400 via-purple-500 to-purple-800 bg-clip-text text-transparent">
-							Hello, Im Jay. A freelance Software Engineer from Pob. Guipos Zamboanga del Sur
-						</h2>
-						<p className="my-8 text-gray-300">
-							A freelance software engineer and student who has redefined what it means to innovate. With over 100 web
-							applications under my belt, Ive woven intricate solutions to modern challenges, demonstrating an
-							unwavering commitment to excellence.
-						</p>
-						<div className="divide-y space-y-4 divide-gray-800">
-							<div className="mt-8 flex gap-4 md:items-center">
-								<div className="w-12 h-12 flex gap-4 rounded-full bg-indigo-100 bg-indigo-900/20">
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										viewBox="0 0 24 24"
-										fill="currentColor"
-										className="w-6 h-6 m-auto text-indigo-400">
-										<path
-											fillRule="evenodd"
-											d="M4.848 2.771A49.144 49.144 0 0112 2.25c2.43 0 4.817.178 7.152.52 1.978.292 3.348 2.024 3.348 3.97v6.02c0 1.946-1.37 3.678-3.348 3.97a48.901 48.901 0 01-3.476.383.39.39 0 00-.297.17l-2.755 4.133a.75.75 0 01-1.248 0l-2.755-4.133a.39.39 0 00-.297-.17 48.9 48.9 0 01-3.476-.384c-1.978-.29-3.348-2.024-3.348-3.97V6.741c0-1.946 1.37-3.68 3.348-3.97zM6.75 8.25a.75.75 0 01.75-.75h9a.75.75 0 010 1.5h-9a.75.75 0 01-.75-.75zm.75 2.25a.75.75 0 000 1.5H12a.75.75 0 000-1.5H7.5z"
-											clipRule="evenodd"></path>
-									</svg>
-								</div>
-								<div className="w-5/6">
-									<h4 className="font-semibold text-lg text-indigo-300">Chat Anytime</h4>
-									<p className="text-gray-400">Need software assistance? Chat me up and Ill code-tally help you out!</p>
-								</div>
-							</div>
-							<div className="pt-4 flex gap-4 md:items-center">
-								<div className="w-12 h-12 flex gap-4 rounded-full bg-teal-100 bg-teal-900/20">
-									<FontAwesomeIcon
-										icon={faUser}
-										className=" w-6 h-6 m-auto text-teal-400 text-2xl text-center"
-									/>
-								</div>
-								<div className="w-5/6">
-									<h4 className="font-semibold text-lg text-teal-300">100% Human</h4>
-									<p className="text-gray-400">Scammers may code chaos, but real humans program trust.</p>
-								</div>
+						<div className="flex flex-col">
+							<p className="mb-2 text-cyan-400 text-lg mt-12 md:mt-36">━━━━━━━ Services ━━━━━━━</p>
+							<p className="text-white text-center md:text-left">
+								Hello, I'm Jay, a freelance software developer from Poblacion Guipos Zamboanga del Sur and a student of
+								Zamboanga del Sur State University (ZDSSU).{" "}
+								<span className="font-bold text-purple-400">P.S. I'm an Introvert.</span>
+							</p>
+
+							<div className="mt-8 text-white">
+								<p>What I'm Good at:</p>
+
+								<SkillsCard />
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<BreakLine/>
+			<BreakLine />
 		</>
 	);
 }

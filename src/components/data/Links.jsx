@@ -3,11 +3,6 @@ import { faLinkedin, faFacebook, faGithub } from "@fortawesome/free-brands-svg-i
 	faPhone,
 	faShop,
 	faMailBulk,
-	faSmile,
-	faAngry,
-	faFrown,
-	faFaceGrinStars,
-	faFaceGrimace,
 	faThumbsUp,
 	faEye,
 	faStar,
@@ -19,7 +14,6 @@ import mysqlIcon from "../../assets/img/mysql-icon.png";
 import capstone from "../../assets/img/capstone.png";
 import product1 from "../../assets/img/products/product1.png";
 import shopee from "../../assets/img/shopee.png";
-import me from "../../assets/img/favicon.png";
 
 export const navLink = [
 	{ id: 1, icon: faHouse, name: "Home", color: "text-cyan-400",hidden: '', href: "/" },
@@ -130,64 +124,6 @@ export const references = [
 		contact: "0912-530-2030",
 		href: "tel: +639125302030",
 		icon: faPhone,
-	},
-];
-
-export const comments = [
-	{
-		id: 1,
-		imgUrl: me,
-		name: "Edmar Jay O. Heolin",
-		feedback:
-			"I'm genuinely pleased with the outcome. Your team's efforts have made a positive impact, and I'm happy with the results. Thank you!",
-		rate: 5,
-		satisfaction: "Happy Client",
-		date: "Dec. 31, 2023",
-		icon: faFaceGrinStars,
-	},
-	{
-		id: 2,
-		imgUrl: me,
-		name: "Edmar Jay O. Heolin",
-		feedback:
-			"I feel quite satisfied with the service provided. Everything went smoothly, and I appreciate the attention to detail. Good work!",
-		rate: 4,
-		satisfaction: "Satisfied Client",
-		date: "Dec. 31, 2023",
-		icon: faSmile,
-	},
-	{
-		id: 3,
-		imgUrl: me,
-		name: "Edmar Jay O. Heolin",
-		feedback:
-			"The service was okay; it met my expectations. Nothing exceptional, but I don't have any major complaints either.",
-		rate: 3,
-		satisfaction: "Neutral Client",
-		date: "Dec. 31, 2023",
-		icon: faFrown,
-	},
-	{
-		id: 4,
-		imgUrl: me,
-		name: "Edmar Jay O. Heolin",
-		feedback:
-			"I must express my frustration with the service. There were issues that need attention, and I expected a smoother experience. Let's address these concerns.",
-		rate: 1,
-		satisfaction: "Frustrated Client",
-		date: "Dec. 31, 2023",
-		icon: faFaceGrimace,
-	},
-	{
-		id: 5,
-		imgUrl: me,
-		name: "Edmar Jay O. Heolin",
-		feedback:
-			"I'm genuinely upset with the service provided. Numerous issues have left me dissatisfied, and I expect urgent resolution to rectify these problems.",
-		rate: 1,
-		satisfaction: "Angry Client",
-		date: "Dec. 31, 2023",
-		icon: faAngry,
 	},
 ];
 

@@ -1,5 +1,8 @@
-/* eslint-disable react/no-unescaped-entities */
-import Cards from "../components/Cards";import Loader from "../components/Loader";import ChatBot from "../components/ChatBot";import { works } from "../components/data/Links";import { useState, useEffect } from "react";
+/* eslint-disable react/no-unescaped-entities */import Cards from "../components/Cards";
+import Loader from "../components/Loader";
+import ChatBot from "../components/ChatBot";
+import { works } from "../components/data/Links";
+import { useState, useEffect } from "react";
 import Gradient from "../components/Gradient";
 function Works() {
 	const [loader, setLoader] = useState(true);
@@ -28,8 +31,8 @@ function Works() {
 						<span className="text-white">Hobbies Meet Innovation.</span>
 					</h1>
 					<p className="mt-8 text-gray-300 italic font-semibold">
-						I'm not just coding, I'm crafting! Dive into a realm where hobbies intertwine with innovation. In here,
-						I sculpt digital experiences that turn your leisure into a masterpiece.
+						I'm not just coding, I'm crafting! Dive into a realm where hobbies intertwine with innovation. In here, I
+						sculpt digital experiences that turn your leisure into a masterpiece.
 					</p>
 				</div>
 				<p className="text-white text-sm sm:text-xl font-bold">── Contact me for source code.</p>

@@ -5,9 +5,12 @@ function NavModal(props) {
 	const { hideModal } = props;
 	return (
 		<div className="lg:hidden">
+			
 			<div
+				onClick={hideModal}
 				aria-hidden="true"
 				className="fixed z-10 inset-0 h-screen w-screen backdrop-blur-2xl transition duration-500 origin-top scale-y-100 bg-gray-900/70 "></div>
+			
 			<div className="flex-col z-20 flex-wrap gap-6 p-8 rounded-3xl border shadow-gray-600/10 justify-end w-[80%]   absolute top-full left-[10%] transition-all duration-300 origin-top translate-y-0 scale-100 opacity-100 visible shadow-none bg-gray-800 border-gray-700 ">
 				<div className="text-gray-300 w-full">
 					<ul className="tracking-wide font-medium flex-col flex gap-6">

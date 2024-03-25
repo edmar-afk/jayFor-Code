@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";import { faRobo
 import { Tooltip } from "react-tooltip";
 function ChatBot() {
 	return (
-		<div className="bg-purple-900 p-3 sm:p-4 rounded-full text-white animate-bounce fixed bottom-5 sm:bottom-8 right-8">
+		<div className="bg-purple-900 z-20 p-3 sm:p-4 rounded-full text-white animate-bounce fixed bottom-5 sm:bottom-8 right-8">
 			<button
 				data-tooltip-id="chatBot"
 				data-tooltip-content="Chatbot not yet Available">
