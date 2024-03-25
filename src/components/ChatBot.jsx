@@ -35,7 +35,7 @@ function ChatBot() {
 								className="w-[200px]"
 							/>
 							<p className="mt-4 text-gray-800 text-center">
-								Dang, I'm Busy right now, you can contact my AI though. HEEHHEEH
+								Dang, I'm Busy right now, you can contact my Lil junior though. HEEHHEEH
 							</p>
 
 							<p className="text-center mt-8 text-sm text-red-700 font-bold">Chatbot currently under maintenance.</p>
