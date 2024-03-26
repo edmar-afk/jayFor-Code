@@ -1,8 +1,4 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPython, faReact } from "@fortawesome/free-brands-svg-icons";
-import { faCode, faShieldAlt } from "@fortawesome/free-solid-svg-icons";
-import Marquee from "react-fast-marquee";
-function Ads() {
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";import { faPython, faReact } from "@fortawesome/free-brands-svg-icons";import { faCode, faShieldAlt } from "@fortawesome/free-solid-svg-icons";import Marquee from "react-fast-marquee";function Ads() {
 	return (
 		<>
 			<div className="bg-gradient-to-r p-4 from-violet-400 to-purple-950 mt-24">
@@ -15,6 +11,7 @@ function Ads() {
 							/>{" "}
 							Trusted
 						</p>
+						<p className="mx-12">•</p>
 						<p className="mx-12">
 							<FontAwesomeIcon
 								icon={faCode}
@@ -22,6 +19,7 @@ function Ads() {
 							/>{" "}
 							Freelancer
 						</p>
+						<p className="mx-12">•</p>
 						<p className="mx-12">
 							<FontAwesomeIcon
 								icon={faReact}
@@ -29,6 +27,7 @@ function Ads() {
 							/>{" "}
 							React Developer
 						</p>
+						<p className="mx-12">•</p>
 						<p className="mx-12">
 							<FontAwesomeIcon
 								icon={faPython}
@@ -36,6 +35,7 @@ function Ads() {
 							/>{" "}
 							Django Developer
 						</p>
+						<p className="mx-12">•</p>
 						<p className="mx-12">
 							<FontAwesomeIcon
 								icon={faCode}
