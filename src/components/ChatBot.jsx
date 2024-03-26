@@ -1,4 +1,5 @@
-/* eslint-disable react/no-unescaped-entities */ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";import { faClose, faCommentDots, faHeadset, faPaperPlane, faRobot } from "@fortawesome/free-solid-svg-icons";
+/* eslint-disable react/no-unescaped-entities */ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faClose, faCommentDots, faHeadset, faPaperPlane, faRobot } from "@fortawesome/free-solid-svg-icons";
 import chatBot from "../assets/img/chatbot.svg";
 import { useState } from "react";
 function ChatBot() {
@@ -40,7 +41,7 @@ function ChatBot() {
 								className="w-[200px]"
 							/>
 							<p className="mt-4 text-gray-800 text-center">
-								Dang, I'm Busy right now, you can contact my Lil junior though. HEEHHEEH
+								Dang, I'm Busy right now but you can contact my Lil junior though. HEEHHEEH
 							</p>
 
 							<p className="text-center mt-8 text-sm text-red-700 font-bold">Chatbot currently under maintenance.</p>
