@@ -1,4 +1,5 @@
-/* eslint-disable react/no-unescaped-entities *//* eslint-disable react-hooks/rules-of-hooks */ import {	faCubesStacked,
+/* eslint-disable react/no-unescaped-entities */ /* eslint-disable react-hooks/rules-of-hooks */ import {
+	faCubesStacked,
 	faDatabase,
 	faMobile,
 	faUpRightFromSquare,
@@ -57,13 +58,10 @@ function skillsCard() {
 					to={"/about"}
 					onMouseEnter={() => setAboutLink(true)}
 					onMouseLeave={() => setAboutLink(false)}
-					className="text-left relative bg-slate-800 my-1 hover:cursor-pointer hover:bg-purple-600 duration-300 p-4 h-[100px] rounded-xl w-full max-w-[150px] md:max-w-[200px]">
-					<p className="text-sm md:text-md">See more</p>
-					<p className="text-xs mt-2">For more Information, visit: </p>
-					<FontAwesomeIcon
-						icon={faUpRightFromSquare}
-						className="absolute right-4 bottom-4"
-					/>
+					className="flex flex-row items-center justify-evenly bg-slate-800 my-1 hover:cursor-pointer hover:bg-purple-600 duration-300 p-4 h-[100px] rounded-xl w-full max-w-[150px] md:max-w-[200px]">
+					<p className="text-lg">See more</p>
+
+					<FontAwesomeIcon icon={faUpRightFromSquare} />
 				</Link>
 			</div>
 

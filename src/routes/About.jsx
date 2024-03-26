@@ -1,6 +1,4 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMapLocation, faLaptopCode, faFile } from "@fortawesome/free-solid-svg-icons";
-import { faFacebook } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";import { faMapLocation, faLaptopCode, faFile } from "@fortawesome/free-solid-svg-icons";import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 import { contactInformation } from "../components/data/Links";
 import { experience } from "../components/data/Links";
 import { references } from "../components/data/Links";
@@ -27,7 +25,7 @@ function About() {
 	}
 	return (
 		<>
-			<Gradient/>
+			<Gradient />
 			<div className="mt-36">
 				<div className="p-4 text-white">
 					<div className="flex flex-col md:flex-row mb-12">
@@ -40,7 +38,7 @@ function About() {
 							<div className="flex flex-auto">
 								<p className="mt-4 text-center">
 									“Perfection is achieved not when there is nothing more to add, but rather when there is nothing more
-									to take away.” –<span className="italic font-bold text-green-500">Antoine de Saint – Exupery</span>
+									to take away.” –<span className="italic font-bold text-purple-400">Antoine de Saint – Exupery</span>
 								</p>
 							</div>
 						</div>
@@ -52,21 +50,22 @@ function About() {
 								</div>
 
 								<div className="flex justify-between items-center flex-wrap">
-									<p className="text-md text-gray-400">Software Engineer</p>
+									<p className="text-md text-gray-400">Software Developer</p>
 
 									<p className="text-md flex items-center">
 										<FontAwesomeIcon
 											icon={faMapLocation}
-											className="mr-2 text-green-500 text-[19px]"
+											className="mr-2 text-purple-400 text-[19px]"
 										/>
 										Pob. Guipos
+										<Gradient />
 									</p>
 								</div>
 								<p className="mt-10 text-sm">Experience</p>
 								<p className="flex items-center mt-2">
 									<FontAwesomeIcon
 										icon={faLaptopCode}
-										className="mr-2 text-green-500 text-[19px]"
+										className="mr-2 text-purple-400 text-[19px]"
 									/>
 									100+ Webapps Created
 								</p>
@@ -75,20 +74,20 @@ function About() {
 										rel="noreferrer"
 										href="https://web.facebook.com/jayjanezkieO3"
 										target="_blank"
-										className="bg-green-500 w-[150px] md:w-[160px] justify-center rounded-md p-2 font-secondary hover:text-cyan-400 hover:bg-cyan-400/10 duration-200 flex items-center text-sm mr-2 sm:mb-0">
+										className="bg-gradient-to-r hover:bg-gradient-to-l from-fuchsia-950 to-violet-950 w-[150px] md:w-[160px] justify-center rounded-md p-2 duration-500 flex items-center text-sm mr-2 sm:mb-0">
 										<FontAwesomeIcon
 											icon={faFacebook}
-											className="bg-green-700 p-2 rounded-full tex mr-2"
+											className="bg-purple-950 hover:bg-fuchsia-950 duration-500 p-2 rounded-full tex mr-2"
 										/>
 										<p>Send message</p>
 									</a>
 									<a
 										href="pdf"
 										target="_blank"
-										className="bg-green-500 w-[140px] md:w-[160px] flex items-center justify-center ml-0 sm:ml-8 rounded-md p-2 font-cyan-400 text-sm hover:text-cyan-400 duration-200 hover:bg-cyan-400/10">
+										className="bg-gradient-to-r hover:bg-gradient-to-l from-fuchsia-950 to-violet-950 w-[140px] md:w-[160px] flex items-center justify-center ml-0 sm:ml-8 rounded-md p-2 text-sm duration-500">
 										<FontAwesomeIcon
 											icon={faFile}
-											className="bg-green-700 p-2 rounded-full mr-2"
+											className="bg-purple-950 hover:bg-fuchsia-950 duration-500 p-2 rounded-full mr-2"
 										/>
 										<p>View Resume</p>
 									</a>
@@ -102,7 +101,7 @@ function About() {
 								<div className="flex flex-wrap justify-between">
 									<div className="flex flex-col">
 										<div className="text-sm">
-											<p className="mt-12 text-green-500 font-bold text-md">Contact Information</p>
+											<p className="mt-12 text-purple-400 font-bold text-md">Contact Information</p>
 											{contactInformation.map((info) => {
 												const { id, type, contact, href, icon } = info;
 												return (
@@ -126,7 +125,7 @@ function About() {
 											})}
 										</div>
 										<div className="text-sm">
-											<p className="mt-12 text-green-500 font-bold text-md">Basic Information</p>
+											<p className="mt-12 text-purple-400 font-bold text-md">Basic Information</p>
 
 											<div className="flex mt-7">
 												<p className="mr-12 flex items-center">
@@ -144,30 +143,31 @@ function About() {
 									<div className="flex flex-row mt-12 justify-center">
 										<div className="text-sm">
 											<div className="leading-1">
-												<p className="text-green-500 font-bold text-md mb-4">Experience:</p>
+												<p className="text-purple-400 font-bold text-md mb-4">Experience:</p>
+												<Gradient />
 												{experience.map((exp) => {
 													const { id, date, skills, stack } = exp;
 													return (
 														<p
 															className="my-2"
 															key={id}>
-															<span className="text-cyan-400 font-bold">{date} • </span>
-															{skills} -<span className="text-green-500 font-semibold"> {stack}</span>
+															<span className="text-pink-500 font-bold">{date} • </span>
+															{skills} -<span className="text-purple-400 font-semibold"> {stack}</span>
 														</p>
 													);
 												})}
 											</div>
 
 											<div className="leading-1 mt-8">
-												<p className="text-green-500 font-bold text-md mb-0">References:</p>
+												<p className="text-purple-400 font-bold text-md mb-0">References:</p>
 												{references.map((contacts) => {
 													const { id, name, contact, icon, href } = contacts;
 													return (
 														<div key={id}>
 															<p className="mt-2">{name}</p>
 															<div className="ml-2 mt-1">
-																<p className="text-xs text-cyan-400 font-semibold">Personal Information:</p>
-																<p className="hover:text-green-500 duration-300">
+																<p className="text-xs text-pink-500 font-semibold">Personal Information:</p>
+																<p className="hover:text-purple-400 duration-300">
 																	<FontAwesomeIcon
 																		icon={icon}
 																		className="text-xs mr-3"
@@ -193,7 +193,7 @@ function About() {
 				</div>
 			</div>
 
-			<ChatBot/>
+			<ChatBot />
 		</>
 	);
 }

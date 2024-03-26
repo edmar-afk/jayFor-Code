@@ -1,5 +1,10 @@
-import { faCalendarCheck, faStar } from "@fortawesome/free-solid-svg-icons";
+/* eslint-disable react/no-unescaped-entities */ import {
+	faCalendarCheck,
+	faStar,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+
 function CommentsCard(props) {
 	// eslint-disable-next-line react/prop-types
 	const { name, rate, feedback, date, imageSrc, rateText, icon } = props;
@@ -11,17 +16,21 @@ function CommentsCard(props) {
 					<img
 						src={imageSrc}
 						alt={rate}
-						draggable='false'
+						draggable="false"
 						className="w-12 h-12 rounded-full mr-4 hover:scale-150 duration-500"
 					/>
 					<div>
-						<div className="text-lg font-medium text-white">{name}</div>
+						<p className="text-lg font-medium text-white capitalize">{name}</p>
 						<div className="text-sm text-blue-300">
 							<FontAwesomeIcon icon={icon} /> {rateText}
 						</div>
 					</div>
 				</div>
-				<p className="text-sm leading-relaxed mb-6 text-white break-words">{feedback}</p>
+				<p
+					className="text-sm leading-relaxed mb-6 text-white break-words"
+					id="text">
+					"{feedback}"
+				</p>
 
 				<div className="flex justify-between items-center absolute bottom-4">
 					<div>
