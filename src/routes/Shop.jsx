@@ -1,5 +1,4 @@
-import ChatBot from "../components/ChatBot";import { useEffect, useState } from "react";
-import ProductsCard from "../components/ProductsCard";
+import ChatBot from "../components/ChatBot";import { useEffect, useState } from "react";import ProductsCard from "../components/ProductsCard";
 import Gradient from "../components/Gradient";
 import axios from "axios";
 
@@ -40,7 +39,7 @@ function Shop() {
 					</p>
 				</div>
 			</div>
-
+			<Gradient customStyle='right-4 md:right-32 bottom-[-150px]'/>
 			<div className="flex flex-row justify-evenly flex-wrap mt-24">
 				{products.map((items) => {
 					const { name, stack, status, fileName, downloads, price } = items;
