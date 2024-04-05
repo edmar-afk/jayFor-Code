@@ -1,5 +1,8 @@
-import Gradient from "../../components/Gradient";import Ads from "../Ads";
+import Gradient from "../../components/Gradient";
+import Ads from "../Ads";
 import bannerLogo from "../../assets/img/bannerLogo.svg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faExclamationTriangle, faEye, faStar, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 function Banner() {
 	return (
 		<>
@@ -20,7 +23,7 @@ function Banner() {
 						</div>
 						<div className="flex flex-row">
 							<div className="flex flex-col">
-								<div className="mb-24 w-fit hidden sm:block text-white font-extralight text-lg border-b-2 border-gray-300">
+								<div className="mb-16 w-fit hidden sm:block text-white font-extralight text-lg border-b-2 border-gray-300">
 									<p>Actively accepting clients</p>
 									<p className="mb-4">Worldwide</p>
 									{/* <FontAwesomeIcon
@@ -32,9 +35,52 @@ function Banner() {
 									<p className="text-white text-4xl md:text-5xl lg:text-7xl">Freelance</p>
 									<p className="py-4">Software Developer</p>
 								</div>
-								<p className="mt-8 text-gray-300 italic font-semibold text-sm text-center block md:hidden">
+								<p className="mt-8 text-gray-300 italic font-semibold text-md text-center block md:hidden">
 									The computer is incredibly fast, accurate, and stupid. Man is incredibly slow, inaccurate, and
 									brilliant. The marriage of the two is a force beyond calculation
+								</p>
+
+								<div className="flex flex-row mt-4 justify-center sm:justify-start flex-wrap">
+									<div className="flex flex-row py-3">
+										<div className="flex flex-row items-center border-[1px] border-purple-300 w-fit py-1.5 px-4 text-white hover:bg-purple-400 duration-200 cursor-pointer">
+											<FontAwesomeIcon icon={faThumbsUp} />
+											<p className="ml-1">Like</p>
+										</div>
+										<div className="flex flex-row items-center border-[1px] border-purple-300 border-l-0 w-fit py-1.5 px-3 text-white">
+											<p className="text-center">0</p>
+										</div>
+									</div>
+
+									<div className="flex flex-row ml-4 sm:ml-6 py-3">
+										<div className="flex flex-row items-center border-[1px] border-purple-300 w-fit py-1.5 px-4 text-white">
+											<FontAwesomeIcon icon={faEye} />
+											<p className="ml-1">Views</p>
+										</div>
+										<div className="flex flex-row items-center border-[1px] border-purple-300 border-l-0 w-fit py-1.5 px-3 text-white">
+											<p className="text-center">0</p>
+										</div>
+									</div>
+
+									<div className="flex flex-row ml-4 sm:ml-6 py-3">
+										<div className="flex flex-row items-center border-[1px] border-purple-300 w-fit py-1.5 px-4 text-white">
+											<FontAwesomeIcon icon={faStar} />
+											<p className="ml-1">Rate</p>
+										</div>
+										<div className="flex flex-row items-center border-[1px] border-purple-300 border-l-0 w-fit py-1.5 px-3 text-white">
+											<p className="text-center">0.0</p>
+										</div>
+									</div>
+								</div>
+								<p className="text-center text-red-400 animate-pulse">
+									<FontAwesomeIcon
+										icon={faExclamationTriangle}
+										className="mr-2"
+									/>
+									Currently working on these features
+									<FontAwesomeIcon
+										icon={faExclamationTriangle}
+										className="ml-2"
+									/>
 								</p>
 							</div>
 						</div>

@@ -4,13 +4,10 @@ import { faCircleChevronDown } from "@fortawesome/free-solid-svg-icons";
 import Logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
 import me from "../assets/img/favicon.png";
-import { overview } from "./data/Links";
-import { Tooltip } from "react-tooltip";
 import NavModal from "./NavModal";
 import { useState } from "react";
 function Navbar() {
 	const [navModal, setNavModal] = useState(false);
-	const [viewStats, setViewStats] = useState(false);
 
 	const handleNavModal = () => {
 		setNavModal(true);
@@ -81,59 +78,14 @@ function Navbar() {
 
 							<div className="md:order-2 mx-3 sm:mx-2 relative">
 								<button
-									onMouseEnter={() => setViewStats(true)}
-									onMouseLeave={() => setViewStats(false)}
 									type="button"
-									className="flex text-sm bg-gray-800 rounded-full focus:ring-1 focus:ring-purple-300 hover:scale-110 duration-300"
-									id="user-menu-button">
-									<span className="sr-only">Open user menu</span>
+									className="flex text-sm bg-gray-800 rounded-full focus:ring-1 focus:ring-purple-300 hover:scale-110 duration-300">
 									<img
 										className="w-10 h-10 rounded-full"
 										src={me}
 										alt="user photo"
 									/>
 								</button>
-
-								{viewStats && (
-									<div className="z-50 fixed px-4 right-4 md:right-16 break-words my-4 text-base list-none divide-y rounded-lg shadow bg-gray-700 divide-gray-600">
-										<div className="text-center py-3">
-											<span className="block text-sm text-white">Edmar Jay O. Heolin</span>
-											<span className="block text-sm truncate text-gray-400">jaywrsnp6@gmail.com</span>
-										</div>
-
-										<ul
-											className="py-2"
-											aria-labelledby="user-menu-button">
-											<div className="px-2 text-xs text-orange-400 mb-4 text-left leading-1">
-												<p>Everything below is </p>
-												<p>just a dummy data.</p>
-												<p>Still working on database.</p>
-											</div>
-											{overview.map((details) => {
-												const { id, name, count, icon, info } = details;
-												return (
-													<li
-														key={id}
-														className="flex items-center"
-														data-tooltip-id={id}
-														data-tooltip-content={info}>
-														<p className="block px-4 py-2 text-sm hover:bg-gray-600 text-gray-200 hover:text-white">
-															<FontAwesomeIcon
-																icon={icon}
-																className="text-purple-400 text-lg mr-2 animate-pulse"
-															/>{" "}
-															{name}: {count}
-														</p>
-														<Tooltip
-															id={id}
-															style={{ backgroundColor: "rgb(37 99 235)", color: "#fff", fontWeight: "bold" }}
-														/>
-													</li>
-												);
-											})}
-										</ul>
-									</div>
-								)}
 							</div>
 						</div>
 					</div>

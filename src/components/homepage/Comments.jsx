@@ -76,6 +76,7 @@ function Comments() {
 					return (
 						<CommentsCard
 							key={id}
+							id={id}
 							name={name}
 							icon={clientEmotion}
 							rate={rate}

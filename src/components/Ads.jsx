@@ -1,4 +1,8 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";import { faPython, faReact } from "@fortawesome/free-brands-svg-icons";import { faCode, faShieldAlt } from "@fortawesome/free-solid-svg-icons";import Marquee from "react-fast-marquee";function Ads() {
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPython, faReact } from "@fortawesome/free-brands-svg-icons";
+import { faCode, faShieldAlt } from "@fortawesome/free-solid-svg-icons";
+import Marquee from "react-fast-marquee";
+function Ads() {
 	return (
 		<>
 			<div className="bg-gradient-to-r p-4 from-violet-400 to-purple-950 mt-24">
