@@ -1,9 +1,103 @@
-import Gradient from "../../components/Gradient";
-import Ads from "../Ads";
-import bannerLogo from "../../assets/img/bannerLogo.svg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faExclamationTriangle, faEye, faStar, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
+import Gradient from "../../components/Gradient";import Ads from "../Ads";import bannerLogo from "../../assets/img/bannerLogo.svg";import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";import { faExclamationTriangle, faEye, faStar, faThumbsUp } from "@fortawesome/free-solid-svg-icons";import axios from "axios";import API_URL from "../data/api";import { useEffect, useState } from "react";import Swal from "sweetalert2";
 function Banner() {
+	const [views, setViews] = useState([]);
+	const [like, setLike] = useState(false);
+	const [likesCount, setLikesCount] = useState([]);
+	const [averageRate, setAverageRate] = useState('')
+	useEffect(() => {
+		const fetchData = async () => {
+			try {
+				const response = await axios.get(`${API_URL}/api/visits/`);
+				const likesResponse = await axios.get(`${API_URL}/api/likes/`);
+				const likeCount = likesResponse.data.length;
+				setLikesCount(likeCount);
+				const count = response.data.length;
+				setViews(count);
+
+				// Fetch comments data
+				const commentsResponse = await axios.get(`${API_URL}/api/comments/`);
+				const comments = commentsResponse.data;
+				
+				// Extract comment rates
+				const commentRates = comments.map((comment) => comment.rate);
+
+				// Calculate average comment rate
+				const totalRates = commentRates.reduce((accumulator, rate) => accumulator + rate, 0);
+				const averageRate = totalRates / commentRates.length;
+				setAverageRate(averageRate);
+			} catch (error) {
+				console.log("Error: ", error.response);
+			}
+		};
+
+		fetchData();
+
+		const intervalId = setInterval(fetchData, 8000);
+
+		return () => clearInterval(intervalId);
+	}, []);
+
+
+	const handleClick = () => {
+		if (!like) {
+			axios
+				.post(`${API_URL}/api/likes/`)
+				.then((response) => {
+					if (response.data.status === "success") {
+						setLike(true);
+						Swal.fire("Thanks for appreciating my crafts!");
+					} else {
+						const swalWithTailwindButtons = Swal.mixin({
+							customClass: {
+								confirmButton: "bg-red-700 py-2 px-4 border-none rounded-xl text-white",
+								cancelButton: "mr-3 bg-green-700 py-2 px-4 border-none rounded-xl text-white",
+							},
+							buttonsStyling: false,
+						});
+
+						swalWithTailwindButtons
+							.fire({
+								title: "Already Clicked Like!",
+								text: "You can't like me two times! Not until you buy me a drink first",
+								icon: "info",
+								showCancelButton: true,
+								confirmButtonText: "I like to unlike you!",
+								cancelButtonText: "Sorry, I forgot!",
+								reverseButtons: true,
+							})
+							.then(async (result) => {
+								if (result.isConfirmed) {
+									try {
+										const response = await axios.delete(`${API_URL}/api/likes/delete_latest/`);
+										swalWithTailwindButtons.fire({
+											title: "You don't like me anymore?",
+											text: response.data.message,
+											icon: "question",
+										});
+									} catch (error) {
+										console.error("Error deleting latest data:", error);
+										swalWithTailwindButtons.fire({
+											title: "Error!",
+											text: "Failed to delete your like, I guess fate tells you otherwise :)",
+											icon: "error",
+										});
+									}
+								} else if (result.dismiss === Swal.DismissReason.cancel) {
+									swalWithTailwindButtons.fire({
+										title: "You got me there!",
+										text: "You're not old, you just forget things.",
+										icon: "info",
+									});
+								}
+							});
+					}
+				})
+				.catch((error) => {
+					console.error("Error:", error);
+				});
+		}
+	};
+
 	return (
 		<>
 			<div className="relative">
@@ -42,12 +136,14 @@ function Banner() {
 
 								<div className="flex flex-row mt-4 justify-center sm:justify-start flex-wrap">
 									<div className="flex flex-row py-3">
-										<div className="flex flex-row items-center border-[1px] border-purple-300 w-fit py-1.5 px-4 text-white hover:bg-purple-400 duration-200 cursor-pointer">
+										<div
+											onClick={handleClick}
+											className="flex flex-row items-center border-[1px] border-purple-300 w-fit py-1.5 px-4 text-white hover:bg-purple-400 duration-200 cursor-pointer">
 											<FontAwesomeIcon icon={faThumbsUp} />
 											<p className="ml-1">Like</p>
 										</div>
 										<div className="flex flex-row items-center border-[1px] border-purple-300 border-l-0 w-fit py-1.5 px-3 text-white">
-											<p className="text-center">0</p>
+											<p className="text-center">{likesCount}</p>
 										</div>
 									</div>
 
@@ -57,7 +153,7 @@ function Banner() {
 											<p className="ml-1">Views</p>
 										</div>
 										<div className="flex flex-row items-center border-[1px] border-purple-300 border-l-0 w-fit py-1.5 px-3 text-white">
-											<p className="text-center">0</p>
+											<p className="text-center">{views}</p>
 										</div>
 									</div>
 
@@ -67,7 +163,7 @@ function Banner() {
 											<p className="ml-1">Rate</p>
 										</div>
 										<div className="flex flex-row items-center border-[1px] border-purple-300 border-l-0 w-fit py-1.5 px-3 text-white">
-											<p className="text-center">0.0</p>
+											<p className="text-center">{averageRate}</p>
 										</div>
 									</div>
 								</div>

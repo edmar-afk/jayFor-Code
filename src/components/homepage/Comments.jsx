@@ -1,5 +1,4 @@
-import { useState, useEffect } from "react";
-import CommentsCard from "../../components/CommentsCard";
+import { useState, useEffect } from "react";import CommentsCard from "../../components/CommentsCard";
 import axios from "axios";
 import satisfied from "../../assets/rates/satisfied.png";
 import happy from "../../assets/rates/happy.png";
@@ -7,12 +6,13 @@ import neutral from "../../assets/rates/neutral.png";
 import frustrated from "../../assets/rates/frustrated.png";
 import angry from "../../assets/rates/angry.jpg";
 import { faLaughBeam, faSmileBeam, faFaceMeh, faFaceGrimace, faFaceAngry } from "@fortawesome/free-solid-svg-icons";
+import API_URL from "../../components/data/api";
 function Comments() {
 	const [comments, setComments] = useState([]);
 
 	const fetchData = async () => {
 		try {
-			const response = await axios.get("https://heolinapi.pythonanywhere.com/api/comments/");
+			const response = await axios.get(`${API_URL}/api/comments/`);
 			setComments(response.data);
 			console.log(response);
 		} catch (error) {

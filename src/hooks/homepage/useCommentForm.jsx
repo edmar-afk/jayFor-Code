@@ -6,7 +6,7 @@ import frustrated from "../../assets/rates/frustrated.png";
 import angry from "../../assets/rates/angry.jpg";
 import axios from "axios";
 import { faLaughBeam, faSmileBeam, faFaceMeh, faFaceGrimace, faFaceAngry } from "@fortawesome/free-solid-svg-icons";
-
+import API_URL from "../../components/data/api";
 const useCommentForm = () => {
 	const [name, setName] = useState("");
 	const [rate, setRate] = useState(3);
@@ -80,7 +80,7 @@ const useCommentForm = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
-			const response = await axios.post("https://heolinapi.pythonanywhere.com/api/comments/", {
+			const response = await axios.post(`${API_URL}/api/comments/`, {
 				name: name,
 				rate: rate,
 				date: currentDate,
