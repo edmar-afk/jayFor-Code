@@ -132,7 +132,7 @@ import Gradient from "../../components/Gradient";import Ads from "../Ads";import
 
 								<div className="flex flex-row mt-4 justify-center sm:justify-start flex-wrap">
 									<div className="flex flex-row py-3 ">
-										<div className="flex p-0.5 animate-gradient-x bg-gray-900 from-orange-500 via-cyan-500 to-purple-500 [animation-duration:_3s] bg-gradient-to-r">
+										<div className="flex p-0.5 animate-gradient-x bg-gray-900 from-purple-400 via-cyan-500 to-orange-500 [animation-duration:_2s] bg-gradient-to-r">
 											<div
 												onClick={handleClick}
 												className="flex flex-row items-center bg-gray-900 border-0  border-purple-300 w-fit py-1.5 px-4 text-white hover:bg-purple-950 duration-200 cursor-pointer">
