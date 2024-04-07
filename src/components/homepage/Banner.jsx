@@ -159,7 +159,7 @@ function Banner() {
 											<p className="ml-1">Views</p>
 										</div>
 										<div className="flex flex-row items-center border-[1px] border-purple-300 border-l-0 w-fit py-1.5 px-3 text-white">
-											<p className="text-center">{views}</p>
+											<p className="text-center">{views / 2}</p>
 										</div>
 									</div>
 
