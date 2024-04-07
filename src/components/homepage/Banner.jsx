@@ -1,9 +1,16 @@
-import Gradient from "../../components/Gradient";import Ads from "../Ads";import bannerLogo from "../../assets/img/bannerLogo.svg";import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";import { faExclamationTriangle, faEye, faStar, faThumbsUp } from "@fortawesome/free-solid-svg-icons";import axios from "axios";import API_URL from "../data/api";import { useEffect, useState } from "react";import Swal from "sweetalert2";
+import Gradient from "../../components/Gradient";import Ads from "../Ads";
+import bannerLogo from "../../assets/img/bannerLogo.svg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye, faStar, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
+import axios from "axios";
+import API_URL from "../data/api";
+import { useEffect, useState } from "react";
+import Swal from "sweetalert2";
 function Banner() {
 	const [views, setViews] = useState([]);
 	const [like, setLike] = useState(false);
 	const [likesCount, setLikesCount] = useState([]);
-	const [averageRate, setAverageRate] = useState('')
+	const [averageRate, setAverageRate] = useState("");
 	useEffect(() => {
 		const fetchData = async () => {
 			try {
@@ -17,7 +24,7 @@ function Banner() {
 				// Fetch comments data
 				const commentsResponse = await axios.get(`${API_URL}/api/comments/`);
 				const comments = commentsResponse.data;
-				
+
 				// Extract comment rates
 				const commentRates = comments.map((comment) => comment.rate);
 
@@ -36,7 +43,6 @@ function Banner() {
 
 		return () => clearInterval(intervalId);
 	}, []);
-
 
 	const handleClick = () => {
 		if (!like) {
@@ -167,17 +173,6 @@ function Banner() {
 										</div>
 									</div>
 								</div>
-								<p className="text-center text-red-400 animate-pulse">
-									<FontAwesomeIcon
-										icon={faExclamationTriangle}
-										className="mr-2"
-									/>
-									Currently working on these features
-									<FontAwesomeIcon
-										icon={faExclamationTriangle}
-										className="ml-2"
-									/>
-								</p>
 							</div>
 						</div>
 					</div>
