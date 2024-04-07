@@ -1,14 +1,4 @@
-import Gradient from "../../components/Gradient";import Ads from "../Ads";
-import bannerLogo from "../../assets/img/bannerLogo.svg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEye, faStar, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
-import axios from "axios";
-import API_URL from "../data/api";
-import { useEffect, useState } from "react";
-import Swal from "sweetalert2";
-function Banner() {
-	const [views, setViews] = useState([]);
-	const [like, setLike] = useState(false);
+import Gradient from "../../components/Gradient";import Ads from "../Ads";import bannerLogo from "../../assets/img/bannerLogo.svg";import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";import { faEye, faStar, faThumbsUp } from "@fortawesome/free-solid-svg-icons";import axios from "axios";import API_URL from "../data/api";import { useEffect, useState } from "react";import Swal from "sweetalert2";function Banner() {	const [views, setViews] = useState([]);	const [like, setLike] = useState(false);
 	const [likesCount, setLikesCount] = useState([]);
 	const [averageRate, setAverageRate] = useState("");
 	useEffect(() => {
@@ -141,15 +131,17 @@ function Banner() {
 								</p>
 
 								<div className="flex flex-row mt-4 justify-center sm:justify-start flex-wrap">
-									<div className="flex flex-row py-3">
-										<div
-											onClick={handleClick}
-											className="flex flex-row items-center border-[1px] border-purple-300 w-fit py-1.5 px-4 text-white hover:bg-purple-400 duration-200 cursor-pointer">
-											<FontAwesomeIcon icon={faThumbsUp} />
-											<p className="ml-1">Like</p>
-										</div>
-										<div className="flex flex-row items-center border-[1px] border-purple-300 border-l-0 w-fit py-1.5 px-3 text-white">
-											<p className="text-center">{likesCount}</p>
+									<div className="flex flex-row py-3 ">
+										<div className="flex p-0.5 animate-gradient-x bg-gray-900 from-orange-500 via-cyan-500 to-purple-500 [animation-duration:_3s] bg-gradient-to-r">
+											<div
+												onClick={handleClick}
+												className="flex flex-row items-center bg-gray-900 border-0  border-purple-300 w-fit py-1.5 px-4 text-white hover:bg-purple-950 duration-200 cursor-pointer">
+												<FontAwesomeIcon icon={faThumbsUp} />
+												<p className="ml-1">Like</p>
+											</div>
+											<div className="flex flex-row ml-0.5 items-center border-0 bg-gray-900 border-purple-300 border-l-0 w-fit py-1.5 px-3 text-white">
+												<p className="text-center">{likesCount}</p>
+											</div>
 										</div>
 									</div>
 

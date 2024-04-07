@@ -1,5 +1,4 @@
-/* eslint-disable react/no-unescaped-entities */ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";import { faCode } from "@fortawesome/free-solid-svg-icons";
-import BreakLine from "../BreakLine";
+/* eslint-disable react/no-unescaped-entities */ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";import { faCode } from "@fortawesome/free-solid-svg-icons";import BreakLine from "../BreakLine";
 import serviceLogo from "../../assets/img/services.svg";
 import SkillsCard from "../SkillsCard";
 function Info() {
@@ -15,7 +14,7 @@ function Info() {
 					<p className="text-white text-center text-sm md:text-2xl leading-loose mb-4">
 						Crafting new services for my portfolio is akin to weaving intricate lines of code into a tapestry of
 						functionality and innovation. With each service I add, I stitch together a seamless user experience,
-						creating a portfolio that showcases my skills as a software developer
+						creating a portfolio that showcases my skills as a software developer.
 					</p>
 
 					<div className="flex flex-row justify-evenly">
