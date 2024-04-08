@@ -17,7 +17,7 @@ function CommentsCard(props) {
 		const predictedLanguage = franc(text);
 		// Get full language name
 		const fullLanguageName = languages[predictedLanguage];
-		setLanguage(fullLanguageName || "Unknown");
+		setLanguage(fullLanguageName || "English");
 
 		const interval = setInterval(() => {
 			setTranslator(() => !translator);
@@ -46,7 +46,7 @@ function CommentsCard(props) {
 				<p
 					className="text-sm leading-relaxed text-white break-words"
 					id="text">
-					"{feedback}"
+					{feedback}
 				</p>
 				<p className="mb-12 mt-2 text-xs text-cyan-400"> - {language}</p>
 
