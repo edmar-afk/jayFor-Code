@@ -6,7 +6,7 @@ import { franc } from "https://esm.sh/franc@6?bundle";
 import languages from "language-names";
 
 function CommentsCard(props) {
-	const {id, name, rate, feedback, date, imageSrc, rateText, icon } = props;
+	const { name, rate, feedback, date, imageSrc, rateText, icon } = props;
 	const [language, setLanguage] = useState("");
 	const [translator, setTranslator] = useState(false);
 
@@ -64,12 +64,12 @@ function CommentsCard(props) {
 					</div>
 					<div className="flex items-center absolute bottom-4 right-0">
 						<div className="mr-3 relative duration-300">
-							<div className={`${translator ? "scale-100" : "scale-0 translate-y-4 translate-x-4"} duration-${id}00`}>
+							{/* <div className={`${translator ? "scale-100" : "scale-0 translate-y-4 translate-x-4"} duration-${id}00`}>
 								<div className="text-white bg-purple-400 absolute top-[-35px] right-[-10px] px-2 rounded-xl z-10">
 									Translate
 								</div>
 								<div className="absolute right-0 top-[-30px] transform -translate-x-1/2 translate-y-1/2 rotate-45 w-4 h-4 bg-purple-400"></div>
-							</div>
+							</div> */}
 							<FontAwesomeIcon
 								icon={faLanguage}
 								className="text-white text-2xl animate-pulse"
