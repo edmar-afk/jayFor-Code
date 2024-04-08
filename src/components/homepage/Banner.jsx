@@ -137,7 +137,7 @@ import Gradient from "../../components/Gradient";import Ads from "../Ads";import
 												onClick={handleClick}
 												className="flex flex-row items-center bg-gray-900 border-0  border-purple-300 w-fit py-1.5 px-4 text-white hover:bg-purple-950 duration-200 cursor-pointer">
 												<FontAwesomeIcon icon={faThumbsUp} />
-												<p className="ml-1">Like</p>
+												<p className="ml-1">Likes</p>
 											</div>
 											<div className="flex flex-row ml-0.5 items-center border-0 bg-gray-900 border-purple-300 border-l-0 w-fit py-1.5 px-3 text-white">
 												<p className="text-center">{likesCount}</p>
