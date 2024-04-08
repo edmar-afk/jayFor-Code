@@ -1,35 +1,41 @@
-import Gradient from "../../components/Gradient";import Ads from "../Ads";import bannerLogo from "../../assets/img/bannerLogo.svg";import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";import { faEye, faStar, faThumbsUp } from "@fortawesome/free-solid-svg-icons";import axios from "axios";import API_URL from "../data/api";import { useEffect, useState } from "react";import Swal from "sweetalert2";function Banner() {	const [views, setViews] = useState([]);	const [like, setLike] = useState(false);
+import Gradient from "../../components/Gradient";import Ads from "../Ads";import bannerLogo from "../../assets/img/bannerLogo.svg";import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye, faSpinner, faStar, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
+import axios from "axios";
+import API_URL from "../data/api";
+import { useEffect, useState } from "react";
+import Swal from "sweetalert2";
+function Banner() {
+	const [views, setViews] = useState([]);
+	const [like, setLike] = useState(false);
 	const [likesCount, setLikesCount] = useState([]);
 	const [averageRate, setAverageRate] = useState("");
+	const [isLoading, setIsLoading] = useState(true); // Initial loading state
+
 	useEffect(() => {
 		const fetchData = async () => {
+			setIsLoading(true); // Set loading to true before the fetch
 			try {
 				const response = await axios.get(`${API_URL}/api/visits/`);
 				const likesResponse = await axios.get(`${API_URL}/api/likes/`);
-				const likeCount = likesResponse.data.length;
-				setLikesCount(likeCount);
-				const count = response.data.length;
-				setViews(count);
-
-				// Fetch comments data
 				const commentsResponse = await axios.get(`${API_URL}/api/comments/`);
+
+				setViews(response.data.length);
+				setLikesCount(likesResponse.data.length);
+
 				const comments = commentsResponse.data;
-
-				// Extract comment rates
 				const commentRates = comments.map((comment) => comment.rate);
-
-				// Calculate average comment rate
 				const totalRates = commentRates.reduce((accumulator, rate) => accumulator + rate, 0);
-				const averageRate = totalRates / commentRates.length;
-				setAverageRate(averageRate);
+				setAverageRate(totalRates / commentRates.length);
 			} catch (error) {
-				console.log("Error: ", error.response);
+				console.error("Error fetching data:", error.response);
+			} finally {
+				setIsLoading(false); // Set loading to false after fetch (regardless of success/error)
 			}
 		};
 
 		fetchData();
 
-		const intervalId = setInterval(fetchData, 8000);
+		const intervalId = setInterval(fetchData, 8000); // Set up polling interval
 
 		return () => clearInterval(intervalId);
 	}, []);
@@ -140,7 +146,16 @@ import Gradient from "../../components/Gradient";import Ads from "../Ads";import
 												<p className="ml-1">Likes</p>
 											</div>
 											<div className="flex flex-row ml-0.5 items-center border-0 bg-gray-900 border-purple-300 border-l-0 w-fit py-1.5 px-3 text-white">
-												<p className="text-center">{likesCount}</p>
+												<p className="text-center">
+													{isLoading ? (
+														<FontAwesomeIcon
+															icon={faSpinner}
+															className="animate-spin w-4"
+														/>
+													) : (
+														<p>{likesCount}</p>
+													)}
+												</p>
 											</div>
 										</div>
 									</div>
@@ -151,7 +166,16 @@ import Gradient from "../../components/Gradient";import Ads from "../Ads";import
 											<p className="ml-1">Views</p>
 										</div>
 										<div className="flex flex-row items-center border-[1px] border-purple-300 border-l-0 w-fit py-1.5 px-3 text-white">
-											<p className="text-center">{views}</p>
+											<p className="text-center">
+												{isLoading ? (
+													<FontAwesomeIcon
+														icon={faSpinner}
+														className="animate-spin w-4"
+													/>
+												) : (
+													<p>{views}</p>
+												)}
+											</p>
 										</div>
 									</div>
 
@@ -161,7 +185,16 @@ import Gradient from "../../components/Gradient";import Ads from "../Ads";import
 											<p className="ml-1">Rate</p>
 										</div>
 										<div className="flex flex-row items-center border-[1px] border-purple-300 border-l-0 w-fit py-1.5 px-3 text-white">
-											<p className="text-center">{averageRate}</p>
+											<p className="text-center">
+												{isLoading ? (
+													<FontAwesomeIcon
+														icon={faSpinner}
+														className="animate-spin w-4"
+													/>
+												) : (
+													<p>{averageRate}</p>
+												)}
+											</p>
 										</div>
 									</div>
 								</div>

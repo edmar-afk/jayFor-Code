@@ -8,7 +8,7 @@ export default {
 				poppins: ["Poppins", "sans-serif"],
 			},
 			animation: {
-				spin: "spin 5s linear infinite",
+				spin: "spin 1s linear infinite",
 				pulse: "pulse 1s linear infinite",
 				fade: "fadeIn .5s ease-in-out",
 				fadeOut: "fadeOut .5s ease-in-out",
