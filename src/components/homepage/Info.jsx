@@ -1,11 +1,16 @@
-/* eslint-disable react/no-unescaped-entities */ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";import { faCode } from "@fortawesome/free-solid-svg-icons";import BreakLine from "../BreakLine";
-import serviceLogo from "../../assets/img/services.svg";
+/* eslint-disable react/no-unescaped-entities */ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCode } from "@fortawesome/free-solid-svg-icons";
+import BreakLine from "../BreakLine";
+import serviceLogo from "../../assets/img/services.png";
 import SkillsCard from "../SkillsCard";
+import Gradient from "../Gradient";
 function Info() {
 	return (
 		<>
-			<div className="max-w-full mx-auto px-3 lg:px-32 py-4">
-				<div className="flex flex-col justify-center text-center">
+			<div className="max-w-full mx-auto px-3 lg:px-32 py-4 relative">
+				<Gradient customStyle="top-1/2 right-1/3" />
+
+				<div className="flex flex-col justify-center text-center z-20">
 					<FontAwesomeIcon
 						icon={faCode}
 						className="text-white text-2xl mb-4 md:mb-14"

@@ -1,11 +1,17 @@
-/* eslint-disable react/prop-types */ /* eslint-disable react/no-unescaped-entities */ import {	faCalendarCheck,	faLanguage,	faStar,
+/* eslint-disable react/prop-types */ /* eslint-disable react/no-unescaped-entities */ import {	faCalendarCheck,	faEye,
+	faLanguage,
+	faStar,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState, useEffect } from "react";
 import { franc } from "https://esm.sh/franc@6?bundle";
 import languages from "language-names";
+import { Button, Dialog, DialogHeader, DialogBody, IconButton, Typography } from "@material-tailwind/react";
 
 function CommentsCard(props) {
+	const [open, setOpen] = useState(false);
+
+	const handleOpen = () => setOpen((cur) => !cur);
 	const { name, rate, feedback, date, imageSrc, rateText, icon } = props;
 	const [language, setLanguage] = useState("");
 	const [translator, setTranslator] = useState(false);
@@ -28,63 +34,126 @@ function CommentsCard(props) {
 
 	return (
 		<>
-			<div className="w-[360px] h-[370px] overflow-y-scroll relative bg-gray-900 mx-auto border-2 border-purple-950 border-l-4 border-l-purple-400  px-6 py-8 rounded-lg rounded-r-none mb-6 hover:border-purple-400 hover:cursor-pointer hover:scale-105 hover:shadow-2xl hover:shadow-purple-400 duration-300">
-				<div className="flex items-center mb-6 sticky top-[-33px] h-16 bg-gray-900">
-					<img
-						src={imageSrc}
-						alt={rate}
-						draggable="false"
-						className="w-12 h-12 rounded-full mr-4 hover:scale-150 duration-500"
-					/>
-					<div>
-						<p className="text-lg font-medium text-white capitalize">{name}</p>
-						<div className="text-sm text-blue-300">
-							<FontAwesomeIcon icon={icon} /> {rateText}
-						</div>
-					</div>
-				</div>
-				<p
-					className="text-sm leading-relaxed text-white break-words"
-					id="text">
-					{feedback}
-				</p>
-				<p className="mb-12 mt-2 text-xs text-cyan-400"> - {language}</p>
-
-				<div className="sticky bottom-[-40px] bg-gray-900 w-full h-14">
-					<div className="flex justify-between items-center absolute bottom-4">
-						<div>
-							<p className="text-purple-400 hover:text-gray-700 mr-4">
-								<FontAwesomeIcon
-									icon={faCalendarCheck}
-									className="mr-2"
+			<div className="max-w-2xl w-full mx-auto z-20">
+				<div className="flex flex-col">
+					<div className="bg-gray-900 border border-purple-900 shadow-2xl rounded-3xl p-4 m-4">
+						<div className="flex-none sm:flex">
+							<div className="relative h-32 w-32 sm:mb-0 flex-initial mb-4">
+								<img
+									src={imageSrc}
+									alt="img"
+									className=" w-32 h-32 object-cover rounded-2xl"
 								/>
-								{date}
-							</p>
-						</div>
-					</div>
-					<div className="flex items-center absolute bottom-4 right-0">
-						<div className="mr-3 relative duration-300">
-							{/* <div className={`${translator ? "scale-100" : "scale-0 translate-y-4 translate-x-4"} duration-${id}00`}>
-								<div className="text-white bg-purple-400 absolute top-[-35px] right-[-10px] px-2 rounded-xl z-10">
-									Translate
+								<a
+									href="#"
+									className="absolute -right-2 bottom-2 -ml-3  text-white p-1 text-xs bg-purple-600 hover:bg-purple-800 font-medium tracking-wider w-78 h-8 flex rounded-full transition ease-in duration-300">
+									<FontAwesomeIcon
+										icon={icon}
+										className="w-6 h-6"
+									/>
+								</a>
+							</div>
+							<div className="flex-auto sm:ml-5 justify-evenly">
+								<div className="flex items-center justify-between sm:mt-2">
+									<div className="flex items-center">
+										<div className="flex flex-col">
+											<div className="w-full flex-none text-lg text-gray-200 font-bold leading-none">{name}</div>
+											<div className="flex-auto text-gray-400 my-1">
+												<span className="mr-3 ">{rateText}</span>
+												<span className="mr-3 border-r border-gray-600  max-h-0"></span>
+											</div>
+										</div>
+									</div>
 								</div>
-								<div className="absolute right-0 top-[-30px] transform -translate-x-1/2 translate-y-1/2 rotate-45 w-4 h-4 bg-purple-400"></div>
-							</div> */}
-							<FontAwesomeIcon
-								icon={faLanguage}
-								className="text-white text-2xl animate-pulse"
-							/>
+								<div className="flex flex-row items-center">
+									<div className="flex items-center text-yellow-400">
+										{Array(Math.floor(rate))
+											.fill(null)
+											.map((_, index) => (
+												<FontAwesomeIcon
+													key={index}
+													icon={faStar}
+												/>
+											))}
+									</div>
+								</div>
+								<div className="flex pt-2  text-sm text-gray-400">
+									<div className="flex-1 inline-flex items-center">
+										<FontAwesomeIcon
+											icon={faCalendarCheck}
+											className="text-sm sm:text-lg mr-2"
+										/>
+										<p className="text-xs sm:text-md">{date}</p>
+									</div>
+									<div className="flex-1 inline-flex items-center">
+										<FontAwesomeIcon
+											icon={faLanguage}
+											className="text-sm sm:text-lg mr-2"
+										/>
+										<p className="text-xs sm:text-md">{language}</p>
+									</div>
+
+									<Button
+										onClick={handleOpen}
+										className="flex-no-shrink items-center bg-purple-600 hover:bg-purple-800 px-2 sm:px-5 ml-0 sm:ml-4 py-1 sm:py-2 sm:text-xs shadow-sm hover:shadow-lg font-medium tracking-wider border-2 border-purple-300 hover:border-purple-500 text-white rounded-full transition ease-in duration-300">
+										<FontAwesomeIcon icon={faEye} /> Feedback
+									</Button>
+								</div>
+							</div>
 						</div>
-						<p className="text-yellow-400 mr-4">
-							{rate}
-							<FontAwesomeIcon
-								icon={faStar}
-								className="ml-1"
-							/>
-						</p>
 					</div>
 				</div>
 			</div>
+
+			<Dialog
+				className="p-4 w-fit bg-gray-800"
+				size="sm"
+				open={open}
+				handler={handleOpen}>
+				<DialogHeader className="justify-between">
+					<img
+						src={imageSrc}
+						alt="exclamation"
+						className="w-24 h-24 rounded-full"
+					/>
+					<IconButton
+						color="gray"
+						size="sm"
+						variant="text"
+						onClick={handleOpen}>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+							strokeWidth={2}
+							className="h-5 w-5 font-bold text-red-400">
+							<path
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								d="M6 18L18 6M6 6l12 12"
+							/>
+						</svg>
+					</IconButton>
+				</DialogHeader>
+				<DialogBody className="overflow-y-scroll">
+					<Typography className="mb-1 font-bold text-purple-200">{name}'s Feedback</Typography>
+					<Typography
+						variant="paragraph"
+						className="font-normal italic text-white max-w-lg">
+						"{feedback}"
+					</Typography>
+					<div>
+						<div className="flex flex-col md:flex-row gap-2 mt-4">
+							<Button
+								color="gray"
+								className="px-4 py-1.5 bg-purple-400">
+								Close
+							</Button>
+						</div>
+					</div>
+				</DialogBody>
+			</Dialog>
 		</>
 	);
 }

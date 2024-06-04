@@ -1,12 +1,8 @@
-import { useState, useEffect } from "react";import CommentsCard from "../../components/CommentsCard";
-import axios from "axios";
-import satisfied from "../../assets/rates/satisfied.png";
-import happy from "../../assets/rates/happy.png";
-import neutral from "../../assets/rates/neutral.png";
-import frustrated from "../../assets/rates/frustrated.png";
+import { useState, useEffect } from "react";import CommentsCard from "../../components/CommentsCard";import axios from "axios";import satisfied from "../../assets/rates/satisfied.png";import happy from "../../assets/rates/happy.png";import neutral from "../../assets/rates/neutral.png";import frustrated from "../../assets/rates/frustrated.png";
 import angry from "../../assets/rates/angry.jpg";
 import { faLaughBeam, faSmileBeam, faFaceMeh, faFaceGrimace, faFaceAngry } from "@fortawesome/free-solid-svg-icons";
 import API_URL from "../../components/data/api";
+import Gradient from "../Gradient";
 function Comments() {
 	const [comments, setComments] = useState([]);
 
@@ -34,7 +30,14 @@ function Comments() {
 					Cheers to success! 🌟🎉
 				</p>
 			</div>
-			<div className="flex flex-row justify-evenly flex-wrap p-2 sm:p-8">
+			<div className="flex flex-row justify-evenly flex-wrap p-2 px-2 sm:px-16 relative">
+				<Gradient customStyle="top-4 left-4" />
+				<Gradient customStyle="top-4 left-4" />
+				<Gradient customStyle="top-4 left-4" />
+
+				<Gradient customStyle="bottom-4 right-24" />
+				<Gradient customStyle="bottom-4 right-24" />
+				<Gradient customStyle="bottom-4 right-24" />
 				{comments.map((clients) => {
 					const { id, name, rate, comment, date } = clients;
 					let imageSrc;

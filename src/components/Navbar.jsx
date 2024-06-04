@@ -19,7 +19,7 @@ function Navbar() {
 
 	return (
 		<>
-			<nav className="z-10 w-full fixed backdrop-blur-sm top-0">
+			<nav className="z-50 w-full fixed backdrop-blur-sm top-0">
 				{navModal && <NavModal hideModal={hideNavModal} />}
 				<div className="max-w-7xl mx-auto px-6 md:px-12 xl:px-6">
 					<div className="flex flex-row items-center justify-between py-2 md:py-4 md:gap-0 mt-8">

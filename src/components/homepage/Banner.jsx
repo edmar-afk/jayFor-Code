@@ -181,8 +181,8 @@ function Banner() {
 
 									<div className="flex flex-row ml-4 sm:ml-6 py-3">
 										<div className="flex flex-row items-center border-[1px] border-purple-300 w-fit py-1.5 px-4 text-white">
-											<FontAwesomeIcon icon={faStar} />
-											<p className="ml-1">Rate</p>
+											<FontAwesomeIcon icon={faStar}  className="animate-pulse"/>
+											<p className="ml-1">Ratings</p>
 										</div>
 										<div className="flex flex-row items-center border-[1px] border-purple-300 border-l-0 w-fit py-1.5 px-3 text-white">
 											<p className="text-center">
