@@ -105,8 +105,9 @@ function CommentsCard(props) {
 				</div>
 			</div>
 
+			
 			<Dialog
-				className="p-4 w-fit bg-gray-800 mx-auto mt-40"
+				className="p-4 w-fit bg-gray-800 mx-auto"
 				size="sm"
 				open={open}
 				handler={handleOpen}>
