@@ -61,6 +61,13 @@ function CommentsCard(props) {
 											<div className="flex-auto text-gray-400 my-1">
 												<span className="mr-3 ">{rateText}</span>
 												<span className="mr-3 border-r border-gray-600  max-h-0"></span>
+												<span className="mr-3">
+													{rate}.0{" "}
+													<FontAwesomeIcon
+														icon={faStar}
+														className="text-yellow-400"
+													/>
+												</span>
 											</div>
 										</div>
 									</div>
@@ -81,21 +88,14 @@ function CommentsCard(props) {
 									<div className="flex-1 inline-flex items-center">
 										<FontAwesomeIcon
 											icon={faCalendarCheck}
-											className="text-sm sm:text-lg mr-2"
+											className="text-lg mr-2"
 										/>
-										<p className="text-xs sm:text-md">{date}</p>
-									</div>
-									<div className="flex-1 inline-flex items-center">
-										<FontAwesomeIcon
-											icon={faLanguage}
-											className="text-sm sm:text-lg mr-2"
-										/>
-										<p className="text-xs sm:text-md">{language}</p>
+										<p className="text-md">{date}</p>
 									</div>
 
 									<Button
 										onClick={handleOpen}
-										className="flex-no-shrink items-center bg-purple-600 hover:bg-purple-800 px-2 sm:px-5 ml-0 sm:ml-4 py-1 sm:py-2 sm:text-xs shadow-sm hover:shadow-lg font-medium tracking-wider border-2 border-purple-300 hover:border-purple-500 text-white rounded-full transition ease-in duration-300">
+										className="flex-no-shrink items-center bg-purple-600 hover:bg-purple-800 px-5 ml-4 py-2 sm:text-xs shadow-sm hover:shadow-lg font-medium tracking-wider border-2 border-purple-300 hover:border-purple-500 text-white rounded-full transition ease-in duration-300">
 										<FontAwesomeIcon icon={faEye} /> Feedback
 									</Button>
 								</div>
@@ -106,7 +106,7 @@ function CommentsCard(props) {
 			</div>
 
 			<Dialog
-				className="p-4 w-fit bg-gray-800"
+				className="p-4 w-fit bg-gray-800 mx-auto mt-40"
 				size="sm"
 				open={open}
 				handler={handleOpen}>
@@ -143,10 +143,18 @@ function CommentsCard(props) {
 						className="font-normal italic text-white max-w-lg">
 						"{feedback}"
 					</Typography>
+					<div className="flex mt-4 text-purple-300">
+						<FontAwesomeIcon
+							icon={faLanguage}
+							className="text-sm sm:text-lg mr-2"
+						/>
+						<p className="text-xs sm:text-md">{language}</p>
+					</div>
 					<div>
 						<div className="flex flex-col md:flex-row gap-2 mt-4">
 							<Button
 								color="gray"
+								onClick={handleOpen}
 								className="px-4 py-1.5 bg-purple-400">
 								Close
 							</Button>
