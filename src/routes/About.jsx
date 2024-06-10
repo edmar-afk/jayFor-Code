@@ -1,5 +1,4 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";import { faMapLocation, faLaptopCode, faFile } from "@fortawesome/free-solid-svg-icons";import { faFacebook } from "@fortawesome/free-brands-svg-icons";
-import { contactInformation } from "../components/data/Links";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";import { faMapLocation, faLaptopCode, faFile } from "@fortawesome/free-solid-svg-icons";import { faFacebook } from "@fortawesome/free-brands-svg-icons";import { contactInformation } from "../components/data/Links";
 import { experience } from "../components/data/Links";
 import { references } from "../components/data/Links";
 import { useState, useEffect } from "react";
@@ -7,6 +6,7 @@ import me from "../assets/img/favicon.png";
 import Loader from "../components/Loader";
 import ChatBot from "../components/ChatBot";
 import Gradient from "../components/Gradient";
+import resume from '../assets/resume.pdf';
 function About() {
 	const [loader, setLoader] = useState(true);
 
@@ -82,7 +82,8 @@ function About() {
 										<p>Send message</p>
 									</a>
 									<a
-										href="pdf"
+										href={resume}
+										rel="noreferrer"
 										target="_blank"
 										className="bg-gradient-to-r hover:bg-gradient-to-l from-fuchsia-950 to-violet-950 w-[140px] md:w-[160px] flex items-center justify-center ml-0 sm:ml-8 rounded-md p-2 text-sm duration-500">
 										<FontAwesomeIcon

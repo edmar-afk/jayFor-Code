@@ -1,5 +1,4 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { navLink } from "./data/Links";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";import { navLink } from "./data/Links";
 import { faCircleChevronDown } from "@fortawesome/free-solid-svg-icons";
 import Logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
@@ -48,7 +47,7 @@ function Navbar() {
 										<li key={id}>
 											<Link
 												to={href}
-												className="block px-4 mr-6 py-2 text-sm text-gray-400 hover:bg-purple-600 rounded-xl hover:text-white"
+												className="block px-4 mr-6 py-2 text-sm text-gray-100 hover:bg-purple-600 rounded-xl hover:text-white"
 												role="menuitem">
 												<div className="flex items-center">
 													<FontAwesomeIcon
@@ -77,15 +76,17 @@ function Navbar() {
 							</div>
 
 							<div className="md:order-2 mx-3 sm:mx-2 relative">
-								<button
-									type="button"
-									className="flex text-sm bg-gray-800 rounded-full focus:ring-1 focus:ring-purple-300 hover:scale-110 duration-300">
-									<img
-										className="w-10 h-10 rounded-full"
-										src={me}
-										alt="user photo"
-									/>
-								</button>
+								<Link to='/about'>
+									<button
+										type="button"
+										className="flex text-sm bg-gray-800 rounded-full focus:ring-1 focus:ring-purple-300 hover:scale-110 duration-300">
+										<img
+											className="w-10 h-10 rounded-full"
+											src={me}
+											alt="user photo"
+										/>
+									</button>
+								</Link>
 							</div>
 						</div>
 					</div>
