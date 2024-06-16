@@ -10,9 +10,9 @@ function App() {
 			try {
 				// Send a POST request to your Django backend API
 				await axios.post(`${API_URL}/api/visits/`);
-				console.log("Visit recorded successfully");
+				// console.log("Visit recorded successfully");
 			} catch (error) {
-				console.error("Error recording visit:", error);
+				// console.error("Error recording visit:", error);
 			}
 		};
 
