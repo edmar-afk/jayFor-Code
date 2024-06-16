@@ -1,52 +1,35 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPython, faReact } from "@fortawesome/free-brands-svg-icons";
-import { faCode, faShieldAlt } from "@fortawesome/free-solid-svg-icons";
 import Marquee from "react-fast-marquee";
+import { ads } from "./data/Links";
+import Gradient from "./Gradient";
+import { useState } from "react";
 function Ads() {
+	const [isHover, setIsHover] = useState(false);
 	return (
 		<>
-			<div className="bg-gradient-to-r p-4 from-violet-400 to-purple-950 mt-24">
-				<div className="flex flex-row justify-evenly font-bold text-white text-xs md:text-lg">
+			<div className="p-4 mt-24 overflow-hidden">
+				<Gradient customStyle={`right-12 duration-300 ${isHover ? 'scale-100': 'scale-0'}`}/>
+				<div className="flex flex-row justify-evenly font-bold text-gray-500 text-xs md:text-lg">
 					<Marquee>
-						<p className="mx-12">
-							<FontAwesomeIcon
-								icon={faShieldAlt}
-								className="text-md"
-							/>{" "}
-							Trusted
-						</p>
-						<p className="mx-12">•</p>
-						<p className="mx-12">
-							<FontAwesomeIcon
-								icon={faCode}
-								className="text-md"
-							/>{" "}
-							Freelancer
-						</p>
-						<p className="mx-12">•</p>
-						<p className="mx-12">
-							<FontAwesomeIcon
-								icon={faReact}
-								className="text-md animate-spin"
-							/>{" "}
-							React Developer
-						</p>
-						<p className="mx-12">•</p>
-						<p className="mx-12">
-							<FontAwesomeIcon
-								icon={faPython}
-								className="text-md"
-							/>{" "}
-							Django Developer
-						</p>
-						<p className="mx-12">•</p>
-						<p className="mx-12">
-							<FontAwesomeIcon
-								icon={faCode}
-								className="text-md"
-							/>{" "}
-							Full Stack Developer
-						</p>
+						{ads.map((lists) => {
+							return (
+								<>
+									<p
+										onMouseEnter={() => setIsHover(true)}
+										onMouseLeave={() => setIsHover(false)}
+										className="mr-5 mb-5 lg:mb-0 cursor-pointer overflow-hidden flex items-center mx-24 sm:mx-36 hover:text-purple-400 hover:drop-shadow-2xl duration-300"
+										key={lists.id}>
+										{
+											<FontAwesomeIcon
+												icon={lists.icon}
+												className="text-5xl"
+											/>
+										}
+										<span className="text-3xl font-bold ml-2 block">{lists.name}</span>
+									</p>
+								</>
+							);
+						})}
 					</Marquee>
 				</div>
 			</div>

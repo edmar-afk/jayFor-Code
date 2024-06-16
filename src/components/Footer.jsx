@@ -1,5 +1,4 @@
-/* eslint-disable react/no-unescaped-entities */ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCalendarAlt } from "@fortawesome/free-solid-svg-icons";
+/* eslint-disable react/no-unescaped-entities */ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";import { faCalendarAlt } from "@fortawesome/free-solid-svg-icons";
 import { socialLinks } from "./data/Links";
 function Footer() {
 	return (

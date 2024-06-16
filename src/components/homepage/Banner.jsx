@@ -1,5 +1,8 @@
-import Gradient from "../../components/Gradient";import Ads from "../Ads";import bannerLogo from "../../assets/img/bannerLogo.svg";import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEye, faSpinner, faStar, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
+import Gradient from "../../components/Gradient";
+import Ads from "../Ads";
+import bannerLogo from "../../assets/img/bannerLogo.svg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye, faMailForward, faSpinner, faStar, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 import API_URL from "../data/api";
 import { useEffect, useState } from "react";
@@ -10,6 +13,15 @@ function Banner() {
 	const [likesCount, setLikesCount] = useState([]);
 	const [averageRate, setAverageRate] = useState("");
 	const [isLoading, setIsLoading] = useState(true); // Initial loading state
+
+	const email = "jaywrsnp6@gmail.com";
+	const subject = "Your Subject";
+	const body = "Custom body text";
+
+	const handleMailTo = (event) => {
+		event.preventDefault();
+		window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+	};
 
 	useEffect(() => {
 		const fetchData = async () => {
@@ -121,11 +133,21 @@ function Banner() {
 							<div className="flex flex-col">
 								<div className="mb-16 w-fit hidden sm:block text-white font-extralight text-lg border-b-2 border-gray-300">
 									<p>Actively accepting clients</p>
-									<p className="mb-4">Worldwide</p>
-									{/* <FontAwesomeIcon
-										icon={faShare}
-										className=""
-									/> */}
+									<div className="flex items-center justify-between">
+										<p className="mb-4">Worldwide</p>
+										<a
+											href={`mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`}
+											onClick={handleMailTo}
+											target="_blank"
+											rel="noreferrer"
+											className="flex items-center text-md font-bold text-cyan-400 animate-bounce">
+											<FontAwesomeIcon
+												icon={faMailForward}
+												className="mr-1.5"
+											/>
+											Hire me
+										</a>
+									</div>
 								</div>
 								<div className="text-3xl font-bold md:text-5xl text-purple-400 text-center md:text-left">
 									<p className="text-white text-4xl md:text-5xl lg:text-7xl">Freelance</p>
@@ -181,7 +203,10 @@ function Banner() {
 
 									<div className="flex flex-row ml-4 sm:ml-6 py-3">
 										<div className="flex flex-row items-center border-[1px] border-purple-300 w-fit py-1.5 px-4 text-white">
-											<FontAwesomeIcon icon={faStar}  className="animate-pulse"/>
+											<FontAwesomeIcon
+												icon={faStar}
+												className="animate-pulse"
+											/>
 											<p className="ml-1">Ratings</p>
 										</div>
 										<div className="flex flex-row items-center border-[1px] border-purple-300 border-l-0 w-fit py-1.5 px-3 text-white">

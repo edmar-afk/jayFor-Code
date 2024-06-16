@@ -1,4 +1,6 @@
-import { faLinkedin, faFacebook, faGithub } from "@fortawesome/free-brands-svg-icons";import {	faHouse,	faUserAlt,
+import { faLinkedin, faFacebook, faGithub, faPython, faReact } from "@fortawesome/free-brands-svg-icons";import {
+	faHouse,
+	faUserAlt,
 	faBriefcase,
 	faPhone,
 	faShop,
@@ -6,20 +8,18 @@ import { faLinkedin, faFacebook, faGithub } from "@fortawesome/free-brands-svg-i
 	faThumbsUp,
 	faEye,
 	faStar,
+	faCode,
+	faShieldAlt,
 } from "@fortawesome/free-solid-svg-icons";
-import djangoIcon from "../../assets/img/django-icon.png";
-import reactIcon from "../../assets/img/react-icon.png";
-import tailwindIcon from "../../assets/img/tailwind-icon.png";
-import mysqlIcon from "../../assets/img/mysql-icon.png";
 import capstone from "../../assets/img/capstone.png";
 import product1 from "../../assets/img/products/product1.png";
 import shopee from "../../assets/img/shopee.png";
 
 export const navLink = [
-	{ id: 1, icon: faHouse, name: "Home", color: "text-cyan-400",hidden: '', href: "/" },
-	{ id: 2, icon: faBriefcase, name: "Works", color: "text-orange-400",hidden: '', href: "/works" },
-	{ id: 3, icon: faUserAlt, name: "About", color: "text-blue-400",hidden: '', href: "/about" },
-	{ id: 4, icon: faShop, name: "Shop", color: "text-purple-400",hidden: 'hidden', href: "/shop" },
+	{ id: 1, icon: faHouse, name: "Home", color: "text-cyan-400", hidden: "", href: "/" },
+	{ id: 2, icon: faBriefcase, name: "Works", color: "text-orange-400", hidden: "", href: "/works" },
+	{ id: 3, icon: faUserAlt, name: "About", color: "text-blue-400", hidden: "", href: "/about" },
+	{ id: 4, icon: faShop, name: "Shop", color: "text-purple-400", hidden: "hidden", href: "/shop" },
 ];
 export const socialLinks = [
 	{ id: 1, name: "Facebook", icon: faFacebook, link: "https://www.facebook.com/jayjanezkieO3" },
@@ -27,11 +27,11 @@ export const socialLinks = [
 	{ id: 3, name: "LinkedIn", icon: faLinkedin, link: "https://www.linkedin.com/in/edmar-jay-heolin-9600b4259/" },
 ];
 
-export const skillsLogo = [
-	{ id: 1, imgUrl: djangoIcon, tooltip: "django-tooltip", title: "Django" },
-	{ id: 2, imgUrl: reactIcon, tooltip: "react-tooltip", title: "React" },
-	{ id: 3, imgUrl: tailwindIcon, tooltip: "tailwind-tooltip", title: "Tailwind" },
-	{ id: 4, imgUrl: mysqlIcon, tooltip: "mysql-tooltip", title: "MySQL" },
+export const ads = [
+	{ id: 1, icon: faPython, name: "Django" },
+	{ id: 2, icon: faReact, name: "React" },
+	{ id: 3, icon: faCode, name: "Trusted" },
+	{ id: 4, icon: faShieldAlt, name: "Freelancer" },
 ];
 
 export const works = [

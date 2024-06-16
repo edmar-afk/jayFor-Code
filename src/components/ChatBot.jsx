@@ -1,4 +1,4 @@
-/* eslint-disable react/no-unescaped-entities */ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";import { faClose, faCommentDots, faHeadset, faPaperPlane, faRobot } from "@fortawesome/free-solid-svg-icons";
+/* eslint-disable react/no-unescaped-entities */ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";import { faClose, faFileArchive, faHeadset, faPaperPlane, faRobot } from "@fortawesome/free-solid-svg-icons";
 import chatBot from "../assets/img/chatbot.svg";
 import { useState } from "react";
 function ChatBot() {
@@ -19,7 +19,7 @@ function ChatBot() {
 								/>
 								Lil Jay (Bot Assistant)
 							</span>
-							<p className="hover:cursor-pointer hover:bg-red-400 hover:text-white rounded-full px-1.5 duration-300">
+							<p className="hover:cursor-pointer hover:bg-purple-400 hover:text-white rounded-full px-1.5 duration-300">
 								<FontAwesomeIcon
 									icon={faClose}
 									className="hover:cursor-pointer"
@@ -42,22 +42,24 @@ function ChatBot() {
 						<p className="text-center mt-8 text-sm text-red-700 font-bold">Chatbot currently under maintenance.</p>
 					</div>
 
-					<div className="flex flex-row sticky bottom-0 mx-2 p-2 items-center bg-gray-300 border-gray-400 border-t-2">
-						<FontAwesomeIcon
-							icon={faCommentDots}
-							className="px-3 text-purple-700 scale-125"
-						/>
-						<input
-							type="text"
-							name=""
-							id=""
-							placeholder="Type a message..."
-							className="rounded-xl w-full border-none bg-gray-300 focus:ring-gray-300"
-						/>
-						<FontAwesomeIcon
-							icon={faPaperPlane}
-							className="px-3 text-purple-700 cursor-pointer hover:scale-150 hover:text-green-800 duration-300"
-						/>
+					<div className="sticky bottom-2 mx-2 p-2 bg-gray-300 border-gray-200 border-t-2">
+						<div className="flex flex-row items-center mt-2">
+							<FontAwesomeIcon
+								icon={faFileArchive}
+								className="px-3 text-purple-700 scale-110 hover:scale-125 duration-300 hover:text-purple-600 cursor-pointer"
+							/>
+							<input
+								type="text"
+								name=""
+								id=""
+								placeholder="Type a message..."
+								className="w-full h-fit border-none bg-gray-300 outline-none bg-transparent"
+							/>
+							<FontAwesomeIcon
+								icon={faPaperPlane}
+								className="px-3 text-purple-700 cursor-pointer hover:scale-125 hover:text-purple-800 duration-300"
+							/>
+						</div>
 					</div>
 				</div>
 			</div>
