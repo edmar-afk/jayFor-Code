@@ -1,5 +1,4 @@
-/* eslint-disable react/prop-types */ /* eslint-disable react/no-unescaped-entities */ import {	faCalendarCheck,	faEye,
-	faLanguage,
+/* eslint-disable react/prop-types */ /* eslint-disable react/no-unescaped-entities */ import {	faCalendarCheck,	faEye,	faLanguage,
 	faStar,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -105,17 +104,16 @@ function CommentsCard(props) {
 				</div>
 			</div>
 
-			
 			<Dialog
-				className="p-4 w-fit bg-gray-800 mx-auto"
-				size="sm"
+				className="p-4 w-[60%] bg-gray-800 mx-auto"
+				
 				open={open}
 				handler={handleOpen}>
-				<DialogHeader className="justify-between">
+				<DialogHeader className="justify- items-start">
 					<img
 						src={imageSrc}
 						alt="exclamation"
-						className="w-24 h-24 rounded-full"
+						className="w-32 h-32 rounded-full mx-auto"
 					/>
 					<IconButton
 						color="gray"
@@ -138,13 +136,13 @@ function CommentsCard(props) {
 					</IconButton>
 				</DialogHeader>
 				<DialogBody className="overflow-y-scroll">
-					<Typography className="mb-1 font-bold text-purple-200">{name}'s Feedback</Typography>
+					<Typography className="mb-1 font-bold text-purple-200 text-center">{name}'s Feedback</Typography>
 					<Typography
 						variant="paragraph"
-						className="font-normal italic text-white max-w-lg">
+						className="font-bold text-lg text-cyan-400 mt-8 mx-auto text-center">
 						"{feedback}"
 					</Typography>
-					<div className="flex mt-4 text-purple-300">
+					<div className="flex justify-center mt-6 text-gray-300">
 						<FontAwesomeIcon
 							icon={faLanguage}
 							className="text-sm sm:text-lg mr-2"
@@ -152,11 +150,11 @@ function CommentsCard(props) {
 						<p className="text-xs sm:text-md">{language}</p>
 					</div>
 					<div>
-						<div className="flex flex-col md:flex-row gap-2 mt-4">
+						<div className="flex flex-col justify-center md:flex-row gap-2 mt-10 mb-10">
 							<Button
 								color="gray"
 								onClick={handleOpen}
-								className="px-4 py-1.5 bg-purple-400">
+								className="px-5 py-2 text-lg bg-purple-400 hover:scale-110 hover:shadow-2xl hover:shadow-white">
 								Close
 							</Button>
 						</div>
