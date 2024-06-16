@@ -1,4 +1,6 @@
-/* eslint-disable react/prop-types */ /* eslint-disable react/no-unescaped-entities */ import {	faCalendarCheck,	faEye,	faLanguage,
+/* eslint-disable react/prop-types */ /* eslint-disable react/no-unescaped-entities */ import {	faCalendarCheck,
+	faEye,
+	faLanguage,
 	faStar,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -105,8 +107,8 @@ function CommentsCard(props) {
 			</div>
 
 			<Dialog
-				className="p-4 w-[60%] bg-gray-800 mx-auto"
-				
+				className="p-4 bg-gray-800 mx-auto"
+				size="lg"
 				open={open}
 				handler={handleOpen}>
 				<DialogHeader className="justify- items-start">
