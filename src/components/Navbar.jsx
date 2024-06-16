@@ -47,7 +47,7 @@ function Navbar() {
 										<li key={id}>
 											<Link
 												to={href}
-												className="block px-4 mr-6 py-2 text-sm text-gray-100 hover:bg-purple-600 rounded-xl hover:text-white"
+												className="block px-4 mr-6 py-2 text-sm text-gray-100 hover:bg-purple-600 rounded-xl hover:text-white duration-300"
 												role="menuitem">
 												<div className="flex items-center">
 													<FontAwesomeIcon
