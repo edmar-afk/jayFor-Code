@@ -10,9 +10,9 @@ function Comments() {
 		try {
 			const response = await axios.get(`${API_URL}/api/comments/`);
 			setComments(response.data);
-			console.log(response);
+			// console.log(response);
 		} catch (error) {
-			console.log("Error: ", error.response);
+			// console.log("Error: ", error.response);
 		}
 	};
 
