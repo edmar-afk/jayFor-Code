@@ -107,8 +107,7 @@ function CommentsCard(props) {
 			</div>
 
 			<Dialog
-				className="p-4 bg-gray-800 mx-auto"
-				size="lg"
+				className="p-4 w-[95%] md:w-[80%] lg:w-[60%] bg-gray-800 mx-auto"
 				open={open}
 				handler={handleOpen}>
 				<DialogHeader className="justify- items-start">
