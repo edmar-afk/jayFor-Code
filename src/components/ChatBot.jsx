@@ -14,13 +14,13 @@ function ChatBot() {
 
 		const lowerCaseQuestion = question.toLowerCase(); // Convert the question to lowercase
 
-		const newEntry = { question: lowerCaseQuestion, response: "", loading: true };
+		const newEntry = { question, response: "", loading: true };
 		setQuestionsList([...questionsList, newEntry]);
 		setQuestion(""); // Clear the input field
 
 		try {
 			const res = await axios.post(`${API_URL}/api/chatbot/`, { question: lowerCaseQuestion });
-			const updatedEntry = { question: lowerCaseQuestion, response: res.data.answer, loading: false };
+			const updatedEntry = { question, response: res.data.answer, loading: false };
 
 			setTimeout(() => {
 				setQuestionsList((prevQuestionsList) =>
