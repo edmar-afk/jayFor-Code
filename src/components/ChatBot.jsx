@@ -124,7 +124,7 @@ function ChatBot() {
 													icon={faUserAlt}
 													className="text-sm text-purple-700 bg-purple-300 p-3 rounded-full"
 												/>
-												<span className="text-[9px] font-semibold text-purple-700 break-all text-right mt-1.5">
+												<span className="text-[7px] sm:text-[9px] font-semibold text-purple-700 break-all text-right mt-1.5">
 													Lil Jay
 												</span>
 											</div>
