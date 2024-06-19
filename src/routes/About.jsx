@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import me from "../assets/img/favicon.png";
 import Loader from "../components/Loader";
 import ChatBot from "../components/ChatBot";
-import Gradient from "../components/Gradient";
 import resume from '../assets/resume.pdf';
 function About() {
 	const [loader, setLoader] = useState(true);
@@ -25,7 +24,7 @@ function About() {
 	return (
 		<>
 			<div className="mt-36 relative">
-				<Gradient />
+				
 				<div className="p-4 text-white">
 					<div className="flex flex-col md:flex-row mb-12">
 						<div className="flex flex-col max-w-[100%] md:w-[320px] rounded-xl items-center justify-center p-2">
@@ -57,7 +56,7 @@ function About() {
 											className="mr-2 text-purple-400 text-[19px]"
 										/>
 										Pob. Guipos
-										<Gradient />
+										
 									</p>
 								</div>
 								<p className="mt-10 text-sm">Experience</p>
@@ -144,7 +143,7 @@ function About() {
 										<div className="text-sm">
 											<div className="leading-1">
 												<p className="text-purple-400 font-bold text-md mb-4">Experience:</p>
-												<Gradient />
+												
 												{experience.map((exp) => {
 													const { id, date, skills, stack } = exp;
 													return (
