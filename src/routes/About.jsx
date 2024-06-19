@@ -1,5 +1,4 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";import { faMapLocation, faLaptopCode, faFile } from "@fortawesome/free-solid-svg-icons";import { faFacebook } from "@fortawesome/free-brands-svg-icons";import { contactInformation } from "../components/data/Links";
-import { experience } from "../components/data/Links";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";import { faMapLocation, faLaptopCode, faFile } from "@fortawesome/free-solid-svg-icons";import { faFacebook } from "@fortawesome/free-brands-svg-icons";import { contactInformation } from "../components/data/Links";import { experience } from "../components/data/Links";
 import { references } from "../components/data/Links";
 import { useState, useEffect } from "react";
 import me from "../assets/img/favicon.png";
@@ -25,8 +24,8 @@ function About() {
 	}
 	return (
 		<>
-			<Gradient />
-			<div className="mt-36">
+			<div className="mt-36 relative">
+				<Gradient />
 				<div className="p-4 text-white">
 					<div className="flex flex-col md:flex-row mb-12">
 						<div className="flex flex-col max-w-[100%] md:w-[320px] rounded-xl items-center justify-center p-2">
