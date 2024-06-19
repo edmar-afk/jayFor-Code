@@ -99,7 +99,7 @@ function ChatBot() {
 									className="mt-2 w-full relative">
 									<div className="flex justify-end items-start gap-2.5 py-4 relative mb-0">
 										<div className="flex flex-col w-fit leading-1.5 p-2 border-2 border-purple-700 rounded-s-xl rounded-br-xl bg-purple-700">
-											<p className="text-xs sm:text-sm font-normal text-white break-all text-right">{entry.question}</p>
+											<p className="text-sm font-normal text-white break-all text-right">{entry.question}</p>
 											<p className="text-white text-xs absolute bottom-[-5px] right-16">
 												{/* {formatTimestampToManilaTime(message.sent_time)} */}
 											</p>
