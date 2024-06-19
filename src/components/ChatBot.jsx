@@ -1,5 +1,4 @@
-/* eslint-disable react/no-unescaped-entities */ import { useState, useRef, useEffect } from "react";import axios from "axios";import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faClose, faFileArchive, faHeadset, faPaperPlane, faRobot, faUserAlt } from "@fortawesome/free-solid-svg-icons";
+/* eslint-disable react/no-unescaped-entities */ import { useState, useRef, useEffect } from "react";import axios from "axios";import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";import { faClose, faFileArchive, faHeadset, faPaperPlane, faRobot, faUserAlt } from "@fortawesome/free-solid-svg-icons";
 import chatBot from "../assets/img/chatbot.svg";
 import API_URL from "./data/api";
 import TypeWriterEffect from "react-typewriter-effect";
@@ -13,13 +12,15 @@ function ChatBot() {
 		e.preventDefault();
 		if (question.trim() === "") return; // Do nothing if input is empty
 
-		const newEntry = { question, response: "", loading: true };
+		const lowerCaseQuestion = question.toLowerCase(); // Convert the question to lowercase
+
+		const newEntry = { question: lowerCaseQuestion, response: "", loading: true };
 		setQuestionsList([...questionsList, newEntry]);
 		setQuestion(""); // Clear the input field
 
 		try {
-			const res = await axios.post(`${API_URL}/api/chatbot/`, { question });
-			const updatedEntry = { question, response: res.data.answer, loading: false };
+			const res = await axios.post(`${API_URL}/api/chatbot/`, { question: lowerCaseQuestion });
+			const updatedEntry = { question: lowerCaseQuestion, response: res.data.answer, loading: false };
 
 			setTimeout(() => {
 				setQuestionsList((prevQuestionsList) =>
@@ -35,6 +36,7 @@ function ChatBot() {
 			);
 		}
 	};
+
 
 	useEffect(() => {
 		if (chatboxRef.current) {

@@ -30,8 +30,8 @@ export const socialLinks = [
 export const ads = [
 	{ id: 1, icon: faPython, name: "Django" },
 	{ id: 2, icon: faReact, name: "React" },
-	{ id: 3, icon: faCode, name: "Trusted" },
-	{ id: 4, icon: faShieldAlt, name: "Freelancer" },
+	{ id: 3, icon: faCode, name: "Freelancer" },
+	{ id: 4, icon: faShieldAlt, name: "Trusted" },
 ];
 
 export const works = [

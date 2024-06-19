@@ -12,7 +12,7 @@ function Footer() {
 							Updated
 						</span>
 						<span className="text-sm font-medium mr-">
-							June 16, 2024{" "}
+							June 19, 2024{" "}
 							<FontAwesomeIcon
 								icon={faCalendarAlt}
 								className="ml-1"
