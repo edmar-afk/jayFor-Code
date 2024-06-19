@@ -1,5 +1,4 @@
-import Gradient from "../../components/Gradient";
-import Ads from "../Ads";
+import Gradient from "../../components/Gradient";import Ads from "../Ads";
 import bannerLogo from "../../assets/img/bannerLogo.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faMailForward, faSpinner, faStar, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
@@ -136,7 +135,7 @@ function Banner() {
 									<div className="flex items-center justify-between">
 										<p className="mb-4">Worldwide</p>
 										<a
-											href={`mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`}
+											href="#"
 											onClick={handleMailTo}
 											target="_blank"
 											rel="noreferrer"

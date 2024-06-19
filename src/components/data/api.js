@@ -1,4 +1,4 @@
-const API_URL = "https://heolinapi.pythonanywhere.com/";
+const API_URL = "ttps://heolinapi.pythonanywhere.com/";
 export default API_URL;
 
 // ("https://heolinapi.pythonanywhere.com/");
