@@ -139,7 +139,7 @@ function Banner() {
 											onClick={handleMailTo}
 											target="_blank"
 											rel="noreferrer"
-											className="flex items-center text-md font-bold text-cyan-400 animate-bounce">
+											className="flex items-center text-md font-bold text-cyan-400 animate-pulse">
 											<FontAwesomeIcon
 												icon={faMailForward}
 												className="mr-1.5"
