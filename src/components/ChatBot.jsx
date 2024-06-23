@@ -1,4 +1,6 @@
-/* eslint-disable react/no-unescaped-entities */ import { useState, useRef, useEffect } from "react";import axios from "axios";import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";import { faClose, faFileArchive, faHeadset, faPaperPlane, faRobot, faUserAlt } from "@fortawesome/free-solid-svg-icons";
+/* eslint-disable react/no-unescaped-entities */ import { useState, useRef, useEffect } from "react";import axios from "axios";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faClose, faFileArchive, faHeadset, faPaperPlane, faRobot, faUserAlt } from "@fortawesome/free-solid-svg-icons";
 import chatBot from "../assets/img/chatbot.svg";
 import API_URL from "./data/api";
 import TypeWriterEffect from "react-typewriter-effect";
@@ -37,7 +39,6 @@ function ChatBot() {
 		}
 	};
 
-
 	useEffect(() => {
 		if (chatboxRef.current) {
 			chatboxRef.current.scrollTo({
@@ -49,10 +50,18 @@ function ChatBot() {
 
 	return (
 		<>
+			{viewChat && (
+				<div
+					onClick={() => setViewChat(!viewChat)}
+					className="fixed top-0 transparent w-full h-full z-40">
+					s
+				</div>
+			)}
+
 			<div
 				ref={chatboxRef}
 				className={`fixed ${
-					viewChat ? "scale-100" : "scale-0 tranpurple-y-64 tranpurple-x-44"
+					viewChat ? "scale-100" : "scale-0"
 				} duration-300 bottom-24 md:bottom-28 overflow-y-scroll animate-fade right-2 md:right-16 bg-gray-300 rounded-l-xl h-[500px] w-full max-w-[360px] md:max-w-[400px] z-50`}>
 				<div className="relative">
 					<div className="flex flex-col sticky top-0 bg-purple-500 p-3 rounded-l-xl rounded-bl-none z-20">
@@ -173,8 +182,10 @@ function ChatBot() {
 					</div>
 				</div>
 			</div>
-			<div className="bg-purple-900 z-50 p-3 sm:p-4 rounded-full text-white animate-bounce fixed bottom-5 sm:bottom-8 right-8">
-				<button onClick={() => setViewChat(!viewChat)}>
+			<div
+				onClick={() => setViewChat(!viewChat)}
+				className="bg-purple-900 cursor-pointer z-50 p-3 sm:p-4 rounded-full text-white animate-bounce fixed bottom-5 sm:bottom-8 right-8">
+				<button>
 					<FontAwesomeIcon
 						icon={faRobot}
 						className="text-2xl sm:text-3xl"
