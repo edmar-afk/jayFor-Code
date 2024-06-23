@@ -149,7 +149,7 @@ function ChatBot() {
 							))}
 						</div>
 					</div>
-					<div className="sticky bottom-2 mx-2 p-2 bg-gray-300 border-gray-200 border-t-2">
+					<div className="sticky bottom-0 mx-2 p-2 bg-gray-300 border-gray-200 border-t-2">
 						<form
 							className="flex flex-row items-center mt-4 mb-2"
 							onSubmit={handleSubmit}>
