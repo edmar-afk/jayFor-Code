@@ -1,12 +1,11 @@
-import Gradient from "../../components/Gradient";import Ads from "../Ads";
-import bannerLogo from "../../assets/img/bannerLogo.svg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Gradient from "../../components/Gradient";import Ads from "../Ads";import bannerLogo from "../../assets/img/bannerLogo.svg";import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faMailForward, faSpinner, faStar, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 import API_URL from "../data/api";
 import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
-function Banner() {
+// eslint-disable-next-line react/prop-types
+function Banner({ onClickScroll }) {
 	const [views, setViews] = useState([]);
 	const [like, setLike] = useState(false);
 	const [likesCount, setLikesCount] = useState([]);
@@ -200,7 +199,9 @@ function Banner() {
 										</div>
 									</div>
 
-									<div className="flex flex-row ml-4 sm:ml-6 py-3">
+									<div
+										onClick={onClickScroll}
+										className="flex flex-row ml-4 sm:ml-6 py-3 cursor-pointer">
 										<div className="flex flex-row items-center border-[1px] border-purple-300 w-fit py-1.5 px-4 text-white">
 											<FontAwesomeIcon
 												icon={faStar}
